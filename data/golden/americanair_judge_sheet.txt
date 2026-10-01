@@ -1,0 +1,325 @@
+# Score each draft 0-2 on grounded, addresses, tone, safe (rubric:
+# src/support_agent/prompts/judge_v1.txt). Do not look at judge output first.
+# The evidence lines are exactly the ones the judge saw, in its order.
+# Write lines '<idx> <grounded> <addresses> <tone> <safe>' to data/golden/americanair_judge_human_scores.txt
+
+=== 0 (5c4b834971) ===
+customer: <user> is it standard for curbside checkin staff to ask for tips? Do you not pay these employees?
+draft:    <user> Agents will request bags to be gate checked to avoid a delay in boarding. However, we don't condone rudeness. We're so sorry, Steve.
+evidence: <user> Agents will request bags to be gate checked to avoid a delay in boarding. However, we don't condone rudeness. We're so sorry, Steve.
+evidence: <user> It sounds like a Basic Economy fare was purchased, which doesn't include a complimentary carry-on bag. Our apology for any misunderstanding.
+evidence: <user> Curbside Check-in <user> terminal D is available in the lower lever of the terminal.
+evidence: <user> The fees aren't usually that high unless you check a third bag. For our elites you're allowed 2 checked bags for free.
+
+=== 1 (0ec9baf75f) ===
+customer: Thanks <user> for changing our flight without notifying us #not #4hourlayover #terrible
+draft:    <user> We're sorry for the inconvenience. If you need assistance with your flight change, please call our team at <phone> to review your options.
+evidence: <user> What's your flight number, Stephanie? We'd like to see what's going on?
+evidence: <user> We're sorry to hear your flight was cancelled. If you need help, please call our team at <phone> to check the next best option for you.
+evidence: <user> Our apologies, we always try to keep seat assignments the same, although sometimes that's not possible.
+evidence: <user> We try to keep everyone as up to date as possible, and appreciate your understanding with the long wait.
+
+=== 2 (ad396c8ed6) ===
+customer: <user> i swear do your flights ever run on time. Everytime i fly you, my flight is delayed.
+draft:    <user> We're sorry for the repeated delays and understand your frustration. To look into your specific situation, could you please share your flight number?
+evidence: <user> We don't like that you've been waiting to depart. What's your flight number, Anthony?
+evidence: <user> Delays are never ideal and we do all we can to avoid cancellations, our apologies. We'll have you on your way as quickly as we can.
+evidence: <user> We do our best to always be on time and assure you that's not a pattern we'd care to keep.
+evidence: <user> We'd like to get you an update, what's your flight number?
+
+=== 3 (d28b0ede3a) ===
+customer: <user> <user> Boarding gates 45A and 45B at the same time? Really?
+draft:    We're sorry for the confusion at the gate. Please work with our airport team to get you on board as smoothly as possible.
+evidence: <user> We count on our gate team to provide a great and easy boarding experience for all our customers. Thank you for sharing your feedback with us
+evidence: <user> We're truly sorry that you're leaving much later than planned. Please work with our team to see all route and options to DFW.
+evidence: <user> We're glad to see you made it! We'll have you #wheelsup just as quickly as we can.
+evidence: <user> We see it's pulled out of the gate. Please work with our airport team if you aren't on board.
+
+=== 4 (a082a8231f) ===
+customer: <user> Thank you! Made the start of my week on to remember. Thanks for the great experience! #FlyAmerican
+draft:    <user> It's great to have you fly with us, Fred. We'll keep the engines running for your next trip out.
+evidence: <user> We're here 24/7 to help! Tweet us if you need anything.
+evidence: <user> It's great to have you fly with us, Fred. We'll keep the engines running for your next trip out.
+evidence: <user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.
+evidence: <user> We always love having you soaring through the skies with us, Kristien! Enjoy your flight and weekend.
+
+=== 5 (9205d298f6) ===
+customer: Flight was cancelled, next flight was 2 days later. <user> told me to eat shit and die... Had to rent a car to drive 2 hours home FML.
+draft:    <user> We're so sorry for the cancellation and the inconvenience it caused. We understand this was a difficult experience and we appreciate you bringing it to our attention.
+evidence: <user> That's not the experience we wanted you to have. We're sorry for the frustration, Morgan. We hope you'll give us another chance.
+evidence: <user> Your flights have to be taken in order to retain value. If you're going to not take a flight, we're happy to change your ticket.
+evidence: <user> Delays are certainly something we try hard to avoid. We're sincerely sorry for the longer than expected wait.
+evidence: <user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.
+
+=== 6 (391450c1bd) ===
+customer: <user> I will never fly with you again! Thanks!!
+draft:    <user> Our team does everything possible to provide a great one, but we're sorry this wasn't the case. What happened?
+evidence: <user> We sure don't like hearing we've disappointed you, Matt. It was our pleasure to have you fly with us today.
+evidence: <user> We love having you board with us and don't like hearing you feel this way. How can we help you today, Heather?
+evidence: <user> The hierarchy of best ginger ale is an age old question but we assure you no disrespect was intended.
+evidence: <user> Our team does everything possible to provide a great one, but we're sorry this wasn't the case. What happened?
+
+=== 7 (69c99b5e37) ===
+customer: <user> Took the guitar I was carrying from me so rudly and said that if something happens they don't know and don't care if something happen to it. Even threat me with leaving me on ground for the next flight
+draft:    <user> We're so sorry for the rudeness you experienced. Please meet us in DMs with your record locator and details so we can look into this.
+evidence: <user> These aren't the interactions we want you to have and we're sorry for the rudeness you encountered, Reza.
+evidence: <user> Our agents do their best to judge the available space in the overhead bins, we're very sorry you had to check your bag tonight.
+evidence: <user> What's going on, Allen? Please meet us in DMs with your record locator and details.
+evidence: <user> Oh, no! We're so sorry to hear that happened. Your bag is on the next flight. Please file a claim when you arrive to set up delivery.
+
+=== 8 (325b84d14c) ===
+customer: <user> , explain to me how you can charge a $ <num> rebooking fee on a $ <num> ticket. Where exactly am I supposed to fly for $3?
+draft:    <user> If you bought a non-refundable ticket and are making voluntary changes at any time, an add collect will apply.
+evidence: <user> Reservations must be used in the sequence that they're purchased or the ticket must be reissued.
+evidence: <user> Voluntary changes to a flight can have a change charge and a difference in fare.
+evidence: <user> If your flight was delayed or cancelled by us, and you missed another flight on us because of it, we're happy to rebook you for free.
+evidence: <user> If you bought a non-refundable ticket and are making voluntary changes at any time, an add collect will apply.
+
+=== 9 (daa6728d03) ===
+customer: <user> Thanks <user> ! We got upgraded to #FirstClass on our RNO-LAX flight this morning! I am thankful for my Gold status. ✈️👍
+draft:    <user> Thanks for flying with us this Monday morning, Chris. Have a fantastic flight and week!
+evidence: <user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.
+evidence: <user> We always love sharing the skies with you. Sit back, relax and enjoy sitting #upfront!
+evidence: <user> We're doing our #UpgradeDance for you. Let us know how it goes!
+evidence: <user> Thanks for flying with us this Monday morning, Chris. Have a fantastic flight and week!
+
+=== 10 (db6debc4c2) ===
+customer: <user> Except it will cost us more to get home from there. <user> issues vouchers for its customers in such situations. Disappointed you don't too
+draft:    We're sorry for the inconvenience. A colleague will follow up to discuss your concerns about additional costs.
+evidence: <user> You can use your voucher towards the ticket and purchase the difference, Bill. Please contact Reservations at <phone> . They can help.
+evidence: <user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>
+evidence: <user> We always try and help our customers as much as possible, but we're sorry we weren't able to cover more of your expenses.
+evidence: <user> We found your record locator, Ed. Please share your wife's, or her ticket number starting with <num> privately in DMs.
+
+=== 11 (04744fab77) ===
+customer: Man, the <user> mobile app sucks. <user> does it way better and has far far more functionality.
+draft:    <user> We'd love you to have fly with us on new AAdventures!
+evidence: <user> We hope you'll give us another chance to impress you, Brandon.
+evidence: <user> We don't want you to have that impression of us, Ali. How can we help you?
+evidence: <user> We'd love you to have fly with us on new AAdventures!
+evidence: <user> Everyday our team takes excellent care of our customers and we're sorry to hear this, Billy. How can we help you today?
+
+=== 12 (485f67708d) ===
+customer: I’m increasingly blown away by <user> and their utter lack of efficiency and regard for customers. CRJs with no wifi, rude employees.
+draft:    <user> We're sorry to hear about your experience. Please share more details so we can look into this for you.
+evidence: <user> We appreciate your patience, we see that our crew is arriving. We'll quickly board and have you in the air soon.
+evidence: <user> Everyday our team takes excellent care of our customers and we're sorry to hear this, Billy. How can we help you today?
+evidence: <user> We assure you that's not a pattern we'd care to keep and always do our best to leave on time. We'll have you airborne ASAP!
+evidence: <user> We're sorry to hear that. Please continue working with our lost and found team to get this resolved.
+
+=== 13 (6ef6cf2a9f) ===
+customer: <user> Thank you! Made the start of my week on to remember. Thanks for the great experience! #FlyAmerican
+draft:    <user> We're glad to hear you had a great start to your week! Thanks for flying with us—we look forward to welcoming you back soon.
+evidence: <user> We always love having you soaring through the skies with us, Kristien! Enjoy your flight and weekend.
+evidence: <user> It's great to have you fly with us, Fred. We'll keep the engines running for your next trip out.
+evidence: <user> We're here 24/7 to help! Tweet us if you need anything.
+evidence: <user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.
+
+=== 14 (a3481e168c) ===
+customer: On our way to Paris and <user> flight canceled twice! Worst customer service ever!!! They won’t give us our bags. Missing flights
+draft:    <user> We want to reunite you with your bag quickly. Did you file a report with our Baggage team at the airport?
+evidence: <user> Your flights have to be taken in order to retain value. If you're going to not take a flight, we're happy to change your ticket.
+evidence: <user> We want to reunite you with your bag quickly. Did you file a report with our Baggage team at the airport?
+evidence: <user> We're sorry things haven't gone as planned tonight. We want to get you on your way as soon as possible.
+evidence: <user> We'd like to get you an update, what's your flight number?
+
+=== 15 (b432bd795e) ===
+customer: Sad <user> gave up MarineTerm. Guess I’ll go back to flying <user> to get miles, since it’s no easier to get to Term B than Term C/D.
+draft:    <user> We're sorry for the extra cardio, Diana. Flight <num> is leaving now from C1.
+evidence: <user> Snacks are available for purchase on board. Basic Economy is a newer, restrictive fare type. Here's info: <url>
+evidence: <user> Sorry about that Wesley. Luckily, there's a lot of things to do to keep you busy at DFW.
+evidence: <user> Please have her reach out to us or give us a call at <phone> for rebooking options.
+evidence: <user> We're sorry for the extra cardio, Diana. Flight <num> is leaving now from C1.
+
+=== 16 (e5b564078d) ===
+customer: <user> from your phones to your agents to your attendants, you have the WORST customer service. Unacceptable. So rude.
+draft:    <user> We count on all our agents to be courteous and kind, Kyle. We're very sorry for any rudeness you experienced.
+evidence: <user> We count on all our agents to be courteous and kind, Kyle. We're very sorry for any rudeness you experienced.
+evidence: <user> We don't want you to have that impression of us, Ali. How can we help you?
+evidence: <user> Please give our specialists in AAdvantage Customer Service a call at <phone> , M-F, 8a-7p CT.
+evidence: <user> We always want to treat you with kindness and respect and we're sorry that wasn't the case today.
+
+=== 17 (a47117bf6b) ===
+customer: <user> especially since there's no reason you can't refund money if I don't get off the standby list, except desire to steal.
+draft:    <user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>
+evidence: <user> If you've purchased a non-refundable ticket and are making a voluntary change, the change charges will apply.
+evidence: <user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>
+evidence: <user> If you didn't end up in the same seating area you purchased, then a seat refund will be issued. Our apologies for this experience.
+evidence: <user> Everything looks great and on time for you! Thanks for giving us another chance. We'll have you #wheelsup soon.
+
+=== 18 (f1708e73de) ===
+customer: My 6am 20 minute flight has just turned to a 9:30 2 hour bus ride and a missed connection. Thanks <user> #Unacceptable
+draft:    <user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.
+evidence: <user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.
+evidence: <user> We know you're ready to be at your destination, and truly appreciate your patience with the wait.
+evidence: <user> Doors close 10 minutes prior to help with an on-time departure and we're sorry for the delay. Please see our team for rebooking.
+evidence: <user> We dislike delays as much as you do, but see that you're on your way now. Thanks for your patience.
+
+=== 19 (756fd5def7) ===
+customer: If <user> is treating a aadvantage member, and card holder this way, I can only imagine what they do to everyone else. I don't want another " im sorry". I want my fucking bag, and money back.
+draft:    <user> Please work with our Baggage team on this. They can take a look for you. <url>
+evidence: <user> Please work with our Baggage team on this. They can take a look for you. <url>
+evidence: <user> We're sorry to hear that your bag didn't arrive. You can check with our Baggage team for any updates: <url>
+evidence: <user> If a Basic Economy ticket is purchased, your bag would need to be checked at the counter or an additional cost would apply, Angel.
+evidence: <user> If you're unhappy with a response from our Customer Relations team, you're welcome to ask for a further review.
+
+=== 20 (a5c4502d05) ===
+customer: Why is it so hard to connect to the <user> wifi?! 😭🌀✈️😐 but wait why can I post this tweet but I can't watch #mylittlepony
+draft:    <user> We're sorry about that, Rick. Please reach out to our friends <user> for assistance with your Wi-Fi.
+evidence: <user> Jeremy, we know staying connected at 35k feet is important. Please reach out to our friends <user> for assistance.
+evidence: <user> Please reach out to our friends <user> to check it out the speeds for you. Our crew should be able to assist with the entertainment.
+evidence: <user> We know you'd like to stay connected on board. We appreciate your feedback, Jessica!
+evidence: <user> We're sorry about that, Rick. Please reach out to our friends <user> for assistance with your Wi-Fi.
+
+=== 21 (8e6f71a5b9) ===
+customer: <user> from your phones to your agents to your attendants, you have the WORST customer service. Unacceptable. So rude.
+draft:    <user> We always want to treat you with kindness and respect and we're sorry that wasn't the case today.
+evidence: <user> We don't want you to have that impression of us, Ali. How can we help you?
+evidence: <user> We always want to treat you with kindness and respect and we're sorry that wasn't the case today.
+evidence: <user> Please give our specialists in AAdvantage Customer Service a call at <phone> , M-F, 8a-7p CT.
+evidence: <user> We count on all our agents to be courteous and kind, Kyle. We're very sorry for any rudeness you experienced.
+
+=== 22 (d51ce6d8b7) ===
+customer: <user> are you purposefully ignoring my issue?
+draft:    <user> We're unable to help with passwords, but we're here to assist. What's going on?
+evidence: <user> Who are you trying to reach, Isaac? Is it Customer Relations or our Central Baggage team?
+evidence: <user> We're unable to help with passwords, but we're here to assist. What's going on?
+evidence: <user> We're taking a look at your DMs now, we'll respond there soon.
+evidence: <user> We never like to hear that our service has disappointed you. We took a closer look and are unable to refund you for your recent experience
+
+=== 23 (5f1f37ca53) ===
+customer: Man, the <user> mobile app sucks. <user> does it way better and has far far more functionality.
+draft:    <user> We're sorry to hear you're having trouble with our app. We'd love to help improve your experience—how can we assist you today?
+evidence: <user> We hope you'll give us another chance to impress you, Brandon.
+evidence: <user> We'd love you to have fly with us on new AAdventures!
+evidence: <user> Everyday our team takes excellent care of our customers and we're sorry to hear this, Billy. How can we help you today?
+evidence: <user> We don't want you to have that impression of us, Ali. How can we help you?
+
+=== 24 (a1218a78c8) ===
+customer: <user> Thanks <user> ! We got upgraded to #FirstClass on our RNO-LAX flight this morning! I am thankful for my Gold status. ✈️👍
+draft:    <user> Thanks for flying with us! Enjoy your First Class experience and have a great trip!
+evidence: <user> We always love sharing the skies with you. Sit back, relax and enjoy sitting #upfront!
+evidence: <user> We're doing our #UpgradeDance for you. Let us know how it goes!
+evidence: <user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.
+evidence: <user> Thanks for flying with us this Monday morning, Chris. Have a fantastic flight and week!
+
+=== 25 (1ae161391f) ===
+customer: <user> are you seriously going to keep us delayed over a curtain strap? Flight128 #thisiscrazy
+draft:    <user> We're truly sorry that you're leaving much later than planned. Please work with our team to see all route and options to DFW.
+evidence: <user> We're truly sorry that you're leaving much later than planned. Please work with our team to see all route and options to DFW.
+evidence: <user> We were waiting on the incoming aircraft. We're glad to see you've pulled out of the gate, and we'll have you wheels up ASAP.
+evidence: <user> We know you're ready to be wheels up. What's your flight number? We'll check on an update for you.
+evidence: <user> Our airport team does their best to reroute our customers through authorized airlines. We're sorry for the long travel day.
+
+=== 26 (20456127e0) ===
+customer: . <user> To your crew’s credit, once they found out that I needed to write a eulogy in-flight, they found me a new seat with a working light and checked repeatedly to make sure I was comfortable.
+draft:    <user> Thank you for sharing this kind feedback. We're glad our crew could assist you during your flight and will pass along your appreciation to the team.
+evidence: <user> Now that's what we're talking about, way to rock it #AATeam!
+evidence: <user> That's great to hear our crew and customers were able to assist him. Thanks for letting us know!
+evidence: <user> Thanks for the shout-out to our crew! We'll be sure to pass this on to our #AATeam for recognition.
+evidence: <user> We appreciate your kudos for Lynn and all of our #AATeam. We'll make sure they're recognized for a job well done!
+
+=== 27 (e0aae7565e) ===
+customer: <user> honestly I am not surprised you're turning into an airline that charges for every little thing. Way to go on that service.
+draft:    We're sorry you feel that way. We appreciate your feedback and are always working to improve your experience.
+evidence: <user> That sure isn't how we want to be remembered. We're here for you anytime you need us, Chris.
+evidence: <user> We're sorry if you missed the pop ups letting you know about the restrictions. We're looking forward to seeing you.
+evidence: <user> We always want to offer you the latest in technology and entertainment and are upgrading our fleet as fast as we can.
+evidence: <user> We appreciate your feedback and we're sorry we've upset you. Most fares allow a free carry-on and personal item on board.
+
+=== 28 (445e883300) ===
+customer: <user> Update #Flight1457 - able to get on another flight, this time to Miami, then onward to PHX, touching down about 2hrs later than originally anticipated (notabigdeal). Just another travel adventure. Oh btw, had to run back to the other end of B terminal to get on #extrasteps
+draft:    <user> We're so sorry for the extra steps and delay today. We appreciate you making it to your destination and hope the rest of your trip goes smoothly.
+evidence: <user> We're so sorry for the delay, Dario. Our team's working hard to have you on your way as quickly as possible.
+evidence: <user> We're so sorry your travel was affected today, Rick. We strive to be on time and we fell short today.
+evidence: <user> We're very sorry for the extra travel time, Brian. Your experience is important to us.
+evidence: <user> This certainly isn't the record we want to have. Our crew's working hard to have everything prepared for takeoff, which should be soon.
+
+=== 29 (b7e78ecc82) ===
+customer: Over an hour later I have my bag, the nightmare is over, <user> can suck it, and I'll remain a Delta loyalist. Off to bed with sick me <url>
+draft:    <user> We're sorry for the delay with your bag. We're glad it arrived safely. Please let our baggage team know if you need anything else by calling <phone>.
+evidence: <user> We're sorry for the extra wait time for you bag, Michael. We'll get it out to you soon.
+evidence: <user> We want to reunite you with your bag as quickly as possible, Ashlee. Please continue working with our Baggage team.
+evidence: <user> Oh wow, please let our baggage team know by dialing <phone> .
+evidence: <user> We're sorry that it didn't come out first. We appreciate your patience today.
+
+=== 30 (9aa4104064) ===
+customer: <user> My connecting flight was cancelled and your company refuses to refund me fairly. With everything going on with your company I'm not surprised.
+draft:    <user> We'd like to look into this for you. What's your flight number and booking reference?
+evidence: <user> We know that this is a season of a lot of special travel. We're fully expecting to avoid cancellations.
+evidence: <user> We'd like to get you an update, what's your flight number?
+evidence: <user> Reservations must be used in the sequence that they're purchased or the ticket must be reissued.
+evidence: <user> We're unable to provide accommodations for delays outside of our control. We appreciate your patience throughout this delay.
+
+=== 31 (a73d41f3bd) ===
+customer: Very proud to have the families of our employees see their workplace. What the <user> team does in Tulsa is AAmazing! #greatteam <url>
+draft:    <user> What a great turnout! Looks like fun is being had by all.
+evidence: <user> Our #AATeam is fantastic, we're so proud to have her be apart of our team!
+evidence: <user> What a great turnout! Looks like fun is being had by all.
+evidence: <user> That sure is one #prettybird, all dolled up and ready to go!
+evidence: <user> That's exactly what we love to hear! #youmadeussmile #wink
+
+=== 32 (4d5ce793d3) ===
+customer: <user> Thanks for changing my flight for free and making my trip so much more comfortable!
+draft:    <user> We're happy when you're happy, Jill! Thanks for your kind words.
+evidence: <user> We're happy when you're happy, Jill! Thanks for your kind words.
+evidence: <user> We're so happy that our team took great care of you! Have a fantastic evening.
+evidence: <user> We offer notification of any changes right to your mobile device via: <url>
+evidence: <user> Thanks for the shout-out! We value your business and glad our team provided great service.
+
+=== 33 (6887e3c7e2) ===
+customer: Loving the new #FlagshipLounge at ORD. Thank you <user> for another great start to the travel day <url>
+draft:    <user> We're so happy you're enjoying the new Flagship Lounge at ORD! Have a wonderful trip.
+evidence: <user> Oh, those are sweet news and thanks for letting us know so we can recognize their #AAwesomeness. #AATeam
+evidence: <user> Can't beat that breakfast, and that AAwesome #AAmericanview. Have a wonderful flight.
+evidence: <user> We're glad you're able to pass the time in comfort, Anne. Enjoy the Admiral's Club!
+evidence: <user> We're so happy that you're enjoying our beautifully renovated lounge! Your impression of us is truly important.
+
+=== 34 (44405b85cf) ===
+customer: <user> Took the guitar I was carrying from me so rudly and said that if something happens they don't know and don't care if something happen to it. Even threat me with leaving me on ground for the next flight
+draft:    <user> Oh, no! We're so sorry to hear that happened. Your bag is on the next flight. Please file a claim when you arrive to set up delivery.
+evidence: <user> These aren't the interactions we want you to have and we're sorry for the rudeness you encountered, Reza.
+evidence: <user> Our agents do their best to judge the available space in the overhead bins, we're very sorry you had to check your bag tonight.
+evidence: <user> What's going on, Allen? Please meet us in DMs with your record locator and details.
+evidence: <user> Oh, no! We're so sorry to hear that happened. Your bag is on the next flight. Please file a claim when you arrive to set up delivery.
+
+=== 35 (22efd32bcb) ===
+customer: Absolutely wonderful crew on <user> flight <num> to Dallas!
+draft:    <user> Thanks so much for your kind words! Our #AATeam is awesome.
+evidence: <user> Thanks so much for your kind words! Our #AATeam is awesome.
+evidence: <user> Paul, we always like seeing our most valued customers happy We're thrilled our team took extra good care of you last night. #AATeam
+evidence: <user> We have a greAAt and good looking #AATeam! Thanks for flying with us, Krystle.
+evidence: <user> Thanks for your kudos this morning! We're happy to hear our #AATeam is taking wonderful care of you.
+
+=== 36 (56ba07a74d) ===
+customer: <user> Except it will cost us more to get home from there. <user> issues vouchers for its customers in such situations. Disappointed you don't too
+draft:    <user> We always try and help our customers as much as possible, but we're sorry we weren't able to cover more of your expenses.
+evidence: <user> We always try and help our customers as much as possible, but we're sorry we weren't able to cover more of your expenses.
+evidence: <user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>
+evidence: <user> You can use your voucher towards the ticket and purchase the difference, Bill. Please contact Reservations at <phone> . They can help.
+evidence: <user> We found your record locator, Ed. Please share your wife's, or her ticket number starting with <num> privately in DMs.
+
+=== 37 (9d882bb6db) ===
+customer: A number of airlines continue to increase their presence at <user> with new non-stop flights. I’m an AAdvantage member with <user> and I sure wish they will increase their service in Pittsburgh as well.
+draft:    <user> Our team did call and received your voicemail, Natalie. Are you available for a call now?
+evidence: <user> We always love sharing the skies with you. Sit back, relax and enjoy sitting #upfront!
+evidence: <user> Our team did call and received your voicemail, Natalie. Are you available for a call now?
+evidence: <user> We assure you that someone will be there shortly to assist. Thanks for waiting.
+evidence: <user> We'll be done soon. Thanks for hanging in there with us.
+
+=== 38 (0b12f73f3b) ===
+customer: My 6am 20 minute flight has just turned to a 9:30 2 hour bus ride and a missed connection. Thanks <user> #Unacceptable
+draft:    <user> We're sorry your flight changed to a bus ride and caused a missed connection. We know this is frustrating and appreciate you bringing it to our attention.
+evidence: <user> We know you're ready to be at your destination, and truly appreciate your patience with the wait.
+evidence: <user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.
+evidence: <user> We dislike delays as much as you do, but see that you're on your way now. Thanks for your patience.
+evidence: <user> Doors close 10 minutes prior to help with an on-time departure and we're sorry for the delay. Please see our team for rebooking.
+
+=== 39 (d940a3fcae) ===
+customer: . <user> To your crew’s credit, once they found out that I needed to write a eulogy in-flight, they found me a new seat with a working light and checked repeatedly to make sure I was comfortable.
+draft:    <user> That's great to hear our crew and customers were able to assist him. Thanks for letting us know!
+evidence: <user> Thanks for the shout-out to our crew! We'll be sure to pass this on to our #AATeam for recognition.
+evidence: <user> That's great to hear our crew and customers were able to assist him. Thanks for letting us know!
+evidence: <user> Now that's what we're talking about, way to rock it #AATeam!
+evidence: <user> We appreciate your kudos for Lynn and all of our #AATeam. We'll make sure they're recognized for a job well done!
+

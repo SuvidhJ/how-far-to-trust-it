@@ -1,0 +1,18 @@
+{
+  "artifact": "americanair_index.jsonl",
+  "written_at": "2026-09-12T18:21:38+00:00",
+  "source": "data/raw/twcs/twcs.csv",
+  "global_seed": 20250911,
+  "git_sha": "2f58407",
+  "brand": "AmericanAir",
+  "rows": 3000,
+  "drawn_from": "train split only (golden set is dev+test, so no overlap)",
+  "train_rows_before_filter": 24477,
+  "after_reply_length_filter": 22302,
+  "after_dm_filter": 14225,
+  "min_reply_chars": 60,
+  "seed": 1325156777,
+  "embed_model": "mistral-embed",
+  "embed_api_calls": 94,
+  "embed_seconds": 71.1
+}

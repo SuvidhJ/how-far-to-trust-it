@@ -1,0 +1,75 @@
+# The evaluation tables in README.md and reports/REPORT.md come from
+# reports/results.json and reports/results_naive.json. This job rebuilds both, and the
+# demo replay cases, from a clean checkout with no API keys (committed caches only) and
+# fails if any number moved.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install (locked)
+        run: uv sync --locked
+
+      - name: Lint
+        run: |
+          uv run ruff format --check .
+          uv run ruff check .
+
+      - name: Tests (no live LLM calls)
+        run: uv run pytest
+
+      - name: Headline numbers reproduce
+        run: |
+          uv run python -m support_agent.eval.harness --offline --out runs/ci.json
+          uv run python scripts/check_results.py reports/results.json runs/ci.json --tol 1e-6
+
+      - name: Naive configuration (honesty waterfall) reproduces
+        run: |
+          uv run python -m support_agent.eval.harness --naive --offline --out runs/ci_naive.json
+          uv run python scripts/check_results.py reports/results_naive.json runs/ci_naive.json --tol 1e-6
+
+      - name: Demo replay cases reproduce
+        run: |
+          uv run python scripts/build_demo_cases.py
+          git diff --exit-code data/processed/americanair_demo_cases.jsonl
+
+  # The demo page at https://<owner>.github.io/<repo>/. Needs Pages set to
+  # "GitHub Actions" in the repository settings once.
+  pages:
+    needs: reproduce
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run python scripts/build_site.py --repo ${{ github.repository }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

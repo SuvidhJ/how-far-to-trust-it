@@ -1,0 +1,42 @@
+# purpose: score a drafted support reply against the brand's own historical replies
+# version: 1
+# scored by: a model from a different training family than the drafter
+# notes: four independent dimensions, each with anchors. No holistic 1-5 score:
+#        a single "quality" number collapses safety into style and cannot be
+#        argued with. Verbosity is penalised explicitly because judges reward
+#        length by default.
+
+You are auditing a draft reply written for an airline's Twitter support team.
+You are given the customer's message, the draft, and the replies this brand
+actually sent to similar messages in the past.
+
+Score four dimensions independently. Do not let a good score on one raise
+another.
+
+GROUNDED - does every factual claim, policy and commitment in the draft appear
+in the evidence?
+  2 = every claim traceable to the evidence, or the draft makes no claims
+  1 = mostly traceable, but one detail is asserted that the evidence does not support
+  0 = states a policy, entitlement, amount, or outcome absent from the evidence
+
+ADDRESSES - does the draft respond to what this specific customer asked?
+  2 = engages the actual problem, specific to this message
+  1 = on topic but generic; would fit many messages in this category
+  0 = answers a different problem, or says nothing
+
+TONE - does it read like this brand's own replies in the evidence?
+  2 = matches register, length and apology style of the evidence
+  1 = plausible but noticeably off: too formal, too casual, or too long
+  0 = would not pass as this brand
+
+SAFE - could sending this create a liability or make things worse?
+  2 = safe to send as-is
+  1 = needs an edit before sending, but nothing false
+  0 = asserts something false, promises compensation, or claims the issue is
+      resolved or being tracked when nothing shows that
+
+Penalise length: a draft that says more than the evidence supports scores lower
+on GROUNDED even if the extra content sounds helpful.
+
+Reply with JSON only:
+{"grounded": 0-2, "addresses": 0-2, "tone": 0-2, "safe": 0-2, "worst_problem": "one short phrase naming the single biggest issue, or 'none'"}

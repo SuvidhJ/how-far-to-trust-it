@@ -1,0 +1,45 @@
+# Human scores for data/golden/americanair_judge_sheet.txt. Author only, never a model.
+# Score each item before looking at any judge output. The rubric is
+# src/support_agent/prompts/judge_v1.txt, and every dimension is scored 0, 1 or 2.
+# Line format: <idx> <grounded> <addresses> <tone> <safe>  (four integers after the index)
+# Lines with fewer than 5 fields are ignored, so unscored items simply drop out of n.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39

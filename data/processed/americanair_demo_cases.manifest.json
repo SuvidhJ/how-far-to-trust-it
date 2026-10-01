@@ -1,0 +1,19 @@
+{
+  "artifact": "americanair_demo_cases.jsonl",
+  "written_at": "2026-09-18T14:24:33+00:00",
+  "source": "data/raw/twcs/twcs.csv",
+  "global_seed": 20250911,
+  "git_sha": "70b0b58",
+  "rows": 218,
+  "classifier": "out-of-fold, repeat 0 of the headline 5-fold CV",
+  "router_threshold": 0.1,
+  "k": 4,
+  "drafters": [
+    "canned",
+    "nearest",
+    "ungrounded_llm",
+    "grounded_llm"
+  ],
+  "judge": "openai/gpt-oss-20b",
+  "cache_misses": 10
+}

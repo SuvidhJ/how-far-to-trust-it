@@ -1,0 +1,28 @@
+{
+  "artifact": "banking77_control.json",
+  "written_at": "2026-09-15T15:50:31+00:00",
+  "source": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/train.csv",
+  "global_seed": 20250911,
+  "git_sha": "8e0e349",
+  "rows": 2830,
+  "seed": 1489118699,
+  "filters": {
+    "matched_profile": [
+      38,
+      37,
+      30,
+      21,
+      20,
+      18,
+      17,
+      15,
+      13,
+      9
+    ],
+    "draws": 5,
+    "full_per_class": 20
+  },
+  "protocol": "5x5-fold CV, logreg C=4 balanced",
+  "embed_model": "mistral-embed",
+  "embed_api_calls": 0
+}

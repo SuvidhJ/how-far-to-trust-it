@@ -1,0 +1,51 @@
+# ---- Data -------------------------------------------------------------
+# Raw/derived data is never committed. data/golden/ IS committed: it is the
+# hand-labelled evaluation set and is the most valuable artifact in the repo.
+data/raw/
+data/interim/
+data/processed/*
+# ...except the retrieval corpus and the Banking77 result, without which a fresh
+# clone cannot reproduce drafting or the control in under 15 minutes (DECISIONS #38).
+!data/processed/americanair_index.jsonl
+!data/processed/americanair_index.manifest.json
+!data/processed/banking77_control.json
+!data/processed/banking77_control.manifest.json
+# ...and the demo's out-of-fold replay cases (scripts/build_demo_cases.py).
+!data/processed/americanair_demo_cases.jsonl
+!data/processed/americanair_demo_cases.manifest.json
+*.zip
+
+# LLM response cache (on-disk, keyed by prompt hash) and run artifacts
+.cache/
+runs/
+*.log
+
+# ---- Python -----------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# ---- Secrets ----------------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# ---- OS / editors -----------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Experiments that informed decisions but are not deliverables
+scratchpad/
+
+# Built demo page (scripts/build_site.py); CI builds and deploys it.
+site/dist/

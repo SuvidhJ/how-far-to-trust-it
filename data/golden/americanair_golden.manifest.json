@@ -1,0 +1,29 @@
+{
+  "artifact": "americanair_golden.jsonl",
+  "written_at": "2026-09-12T17:42:00+00:00",
+  "source": "data/raw/twcs/twcs.csv",
+  "global_seed": 20250911,
+  "git_sha": "8d4b930",
+  "brand": "AmericanAir",
+  "rows": 220,
+  "taxonomy_version": "1.0",
+  "labeller": "author (single annotator)",
+  "label_counts": {
+    "praise_service": 21,
+    "other": 18,
+    "ask_policy": 15,
+    "rebook_reroute": 13,
+    "refund_compensation": 30,
+    "manage_booking": 18,
+    "track_baggage": 20,
+    "complain_service": 37,
+    "loyalty_program": 9,
+    "report_disruption": 39
+  },
+  "ambiguous": 26,
+  "excluded": {
+    "2677500": "thread_duplicate",
+    "2749716": "anchored"
+  },
+  "protocol": "Labelled from the customer message alone; the brand reply was hidden. Taxonomy frozen before labelling began. Single annotator, so inter-annotator agreement is not available and is reported as a limitation."
+}

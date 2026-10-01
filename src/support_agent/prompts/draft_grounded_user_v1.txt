@@ -1,0 +1,13 @@
+# purpose: user turn for the grounded drafter (the system)
+# version: 1
+# changing a single byte invalidates every cached draft; bump the version instead
+
+Customer message:
+{message}
+
+Predicted intent: {intent}
+
+How this brand replied to the most similar past messages:
+{evidence}
+
+Write the reply.

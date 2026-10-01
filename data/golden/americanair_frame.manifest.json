@@ -1,0 +1,25 @@
+{
+  "artifact": "americanair_frame.jsonl",
+  "written_at": "2026-09-11T19:57:03+00:00",
+  "source": "data/raw/twcs/twcs.csv",
+  "global_seed": 20250911,
+  "git_sha": "37cfff4",
+  "brand": "AmericanAir",
+  "rows": 220,
+  "sampled_from": "dev+test threads only",
+  "strata": {
+    "praise_service": 20,
+    "rebook_reroute": 20,
+    "track_baggage": 20,
+    "random": 40,
+    "loyalty_program": 20,
+    "ask_policy": 20,
+    "complain_service": 20,
+    "report_disruption": 20,
+    "refund_compensation": 20,
+    "manage_booking": 20
+  },
+  "seed": 3854363812,
+  "seed_purpose": "golden:AmericanAir",
+  "note": "Unlabelled sampling frame. Labels are added by hand, never by a model."
+}

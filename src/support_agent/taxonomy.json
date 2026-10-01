@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "brand": "AmericanAir",
+  "frozen_at": "2026-09-12",
+  "frozen_before_labelling": true,
+  "induced_from": "train split only, n=1200, seed=taxonomy:AmericanAir, TF-IDF + KMeans k=20, clusters named by LLM, merged by hand",
+  "tie_break_rule": "27.6% of training messages match two or more intent keyword rules. When a message carries more than one intent, label the one the customer wants ACTION on. If no action is requested, label the topic they lead with. Sentiment is never an intent: an angry message about a lost bag is track_baggage, not complain_service.",
+  "other_rule": "Use `other` only when no other label applies, not when the message is unclear. Unclear messages still get their best-fit label and are flagged `ambiguous` in the golden set.",
+  "intents": [
+    {
+      "id": "report_disruption",
+      "letter": "A",
+      "name": "report disruption",
+      "description": "The flight is delayed, cancelled, diverted, or the customer is stuck on the aircraft or has missed a connection. They want acknowledgement, an explanation, or an ETA - not, yet, a specific remedy.",
+      "positive": "three hour delay? You guys r trashhhhhhh",
+      "near_miss": "There is none. Rebook me. I am getting off",
+      "near_miss_is": "rebook_reroute",
+      "near_miss_why": "A disruption is the cause, but the customer is asking for a specific remedy, which is a different action for the agent."
+    },
+    {
+      "id": "rebook_reroute",
+      "letter": "B",
+      "name": "rebook or reroute",
+      "description": "The customer explicitly asks to be moved to a different flight, put on standby, rerouted, or have their itinerary changed because of a disruption.",
+      "positive": "I just missed a flight so had to cancel and rebook - can you get me on the next one to DFW",
+      "near_miss": "Now my 7:15 flight is showing 7:55 because of a late flight attendant",
+      "near_miss_is": "report_disruption",
+      "near_miss_why": "Reports the problem but makes no request to be moved."
+    },
+    {
+      "id": "track_baggage",
+      "letter": "C",
+      "name": "track baggage",
+      "description": "Anything about a bag: lost, delayed, damaged, a forced gate-check, or a carry-on dispute.",
+      "positive": "Are you kidding me?! You make me check my bag and then it comes out on the belt like this?!",
+      "near_miss": "why would they make me pay for my ONE CARRY ON SIZE bag when I didn't pay for it on my first flight",
+      "near_miss_is": "ask_policy",
+      "near_miss_why": "The bag is the subject, but the customer is disputing a fee rule, not reporting a bag problem."
+    },
+    {
+      "id": "refund_compensation",
+      "letter": "D",
+      "name": "request refund or compensation",
+      "description": "The customer wants money, miles, a voucher, or reimbursement - for a fare, a fee, an expense caused by a disruption, or as goodwill.",
+      "positive": "you should be reimbursing the hotel bill you made us foot for the missed connection",
+      "near_miss": "how do you see if a flight was booked with refundable tickets? Doesn't say on the app",
+      "near_miss_is": "ask_policy",
+      "near_miss_why": "Asks how refundability works; does not request a refund."
+    },
+    {
+      "id": "manage_booking",
+      "letter": "E",
+      "name": "manage booking",
+      "description": "Seat assignment or upgrade, check-in, boarding pass, name correction, or any change to an existing reservation that is not caused by a disruption.",
+      "positive": "What a great window seat. Why can't a prompt be set when you choose 10A?",
+      "near_miss": "There is none. Rebook me. I am getting off..need upgrade",
+      "near_miss_is": "rebook_reroute",
+      "near_miss_why": "Driven by a disruption, so the remedy is a rebooking, not routine seat management."
+    },
+    {
+      "id": "ask_policy",
+      "letter": "F",
+      "name": "ask policy or information",
+      "description": "A question about rules, fees, allowances, procedures, or the status of a flight the customer is not currently disrupted by. Answerable from published information.",
+      "positive": "Will that TSA form be sufficient enough to be able to check-in/check my bag tomorrow morning?",
+      "near_miss": "Can we please get an update on our flight Dallas to MKE. No one seems to know anything",
+      "near_miss_is": "report_disruption",
+      "near_miss_why": "Phrased as a question, but the customer is in a live disruption and wants acknowledgement."
+    },
+    {
+      "id": "complain_service",
+      "letter": "G",
+      "name": "complain about service",
+      "description": "Dissatisfaction with staff, crew, ground handling, or the airline generally, with no specific remedy requested and no other intent present.",
+      "positive": "truly awful customer service and your ground staff blaming another airline is unacceptable",
+      "near_miss": "Never flying with you again. Just received my bag 2 mins ago.",
+      "near_miss_is": "track_baggage",
+      "near_miss_why": "Angry in tone, but the subject is a bag, and the tie-break rule says sentiment is never the intent."
+    },
+    {
+      "id": "praise_service",
+      "letter": "H",
+      "name": "praise service",
+      "description": "Thanks, compliments, or a shout-out to staff. Includes gratitude after a problem was solved.",
+      "positive": "Your rep, Jacki, here at ORD helped me get home tonight. Thanks for the response!",
+      "near_miss": "Thanks for a 5 hour delay to start the week off. #platinumlife",
+      "near_miss_is": "report_disruption",
+      "near_miss_why": "Sarcasm. The literal word 'thanks' is not praise; read the intent, not the token."
+    },
+    {
+      "id": "loyalty_program",
+      "letter": "I",
+      "name": "ask about loyalty programme",
+      "description": "AAdvantage miles, elite status, boarding group, lounge access, or benefits tied to status.",
+      "positive": "Hit Gold status and I'm still Group 6? What gives? What's the benefit of Gold?",
+      "near_miss": "Anyone with American Aadvantage miles they won't use and would like to gift?",
+      "near_miss_is": "other",
+      "near_miss_why": "Addressed to other users, not a request to the airline."
+    },
+    {
+      "id": "other",
+      "letter": "J",
+      "name": "other",
+      "description": "Anything else: chit-chat, photos, news commentary, messages aimed at other users, marketing, or content that is not a support request at all.",
+      "positive": "HAPPY HALLOWEEN!!!!!",
+      "near_miss": "Kudos to the pilot that had the smoothest landing I've experienced",
+      "near_miss_is": "praise_service",
+      "near_miss_why": "Not a support request, but it is directed at the airline and is clearly praise."
+    }
+  ]
+}

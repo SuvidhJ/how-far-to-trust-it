@@ -1,0 +1,394 @@
+[
+  {
+    "cluster": 0,
+    "size": 48,
+    "top_terms": "hour, upgrade, hour delay, possible, flight, delay, user hour, fly, hour flight, user possible, upgrade flight, plane",
+    "examples": [
+      "Thanks <user> for a 5 hour delay to start the week off. #platinumlife",
+      "<user> three hour delay? You guys r trashhhhhhh 🚮🚮🚮. Literally garbage",
+      "<user> comedy flight from Miami to Heathrow, ran out of nibbles before everyone got their first drink, then run out of red wine after first hour! Top class planning 🙄🙄🙄",
+      "Ok so our <user> flight took off we just landed at the wrong airport! A 2 hour flight has taken 5 already.",
+      "I fly <user> as much as possible and this has never happened to me... I think I’m going to start sticking with one airline!",
+      "<user> when can flight <flight> get off? Been stuck on runway for nearly an hour and we’re just circling the airport. What’s going on?",
+      "<user> it would be great to get a upgrade when I fly next month:)",
+      "<user> I'm on a flight to DC now then I'm stuck there until 11, I had a 4 hour flight booked because I have really bad aniexty"
+    ],
+    "proposed": {
+      "name": "report delay",
+      "description": "Customer reports experiencing a flight delay or being stuck on the runway and seeks information or compensation.",
+      "distinct_from": "request upgrade"
+    }
+  },
+  {
+    "cluster": 1,
+    "size": 68,
+    "top_terms": "thanks, thanks user, user thanks, flight, url, great, user url, home, upgrade, day, response, care",
+    "examples": [
+      "<user> Your rep, Jacki, here at ORD helped me get home tonight. Thanks for the response!",
+      "Thanks <user> . Love getting this heads up w/ 12 hour lead time. cc: <user> <url>",
+      "<user> thanks for losing our guitars and not having any ideal where They are... that's a 10k lose.",
+      "Thanks <user> for cancelling my flight and sending me to DC... really great for my aniexty",
+      "<user> Thanks, I know that may effect my flight path, but it doesn't mention LHR. But we would be travelling through it?",
+      "Thanks . <user> for helping me book my flight.",
+      "Thanks <user> gate agent Ananda @ MSN for the “Going for great” work to try and keep me connecting with delayed flights. #AA spirit shining brightly!",
+      "Thanks to <user> for turning a late departure into am ahead of schedule arrival!!!"
+    ],
+    "proposed": {
+      "name": "thank staff",
+      "description": "Customer expresses gratitude toward airline employees for assistance or service received.",
+      "distinct_from": "request help"
+    }
+  },
+  {
+    "cluster": 2,
+    "size": 52,
+    "top_terms": "customer, customer service, service, user customer, bad, good, thanks, travel, flight, horrible, fly, friendly",
+    "examples": [
+      "<user> wants me to pay extra for seat assignments on a $ <num> ticket. Seriously. Keep waiting for airlines to figure out customer service.",
+      "<user> Absolutely awful customer service and will never fly with you again. Because we were originally scheduled to fly out Monday, not Sunday. 🙄",
+      "<user> truly awful customer service and your ground staff blaming <user> is unacceptable, I bought the ticket from you!!!",
+      "<user> <user> Hats off to you both for the quick replies and to <user> for the quick investigation and response - while it’s not fixed yet this was good customer service - thanks guys!",
+      "<user> <user> i agree...today was a horrendous travel experience and <user> totally dropped the ball 😩 i'm so disappointed in their customer service &amp; for the way they treated us...i expected better SMH 😞",
+      "<user> VKGTIC He is the first class FA on this flight. Honestly some of the best customer service I've had, and I always have good service on AA.",
+      ". <user> y'all customer service in real life people is horrible",
+      "<user> I didn't catch it, sorry. She was working at customer service near gate A5 in PDX and rebooked me from PDX-EWR to PDX-JFK."
+    ],
+    "proposed": {
+      "name": "provide feedback",
+      "description": "Customers are sharing their opinions about the quality of customer service they received.",
+      "distinct_from": "report issue"
+    }
+  },
+  {
+    "cluster": 3,
+    "size": 369,
+    "top_terms": "flight, just, fly, don, help, time, gate, bag, airport, plane, know, going",
+    "examples": [
+      "Hey <user> ... please help my friend with hearing disabilities <user> You guys can still make things right. #customerservice <url>",
+      "If I get out of the military, I would like to work with <user> ...help a veteran out?!",
+      "<user> Yes but why would they make me pay for my ONE CARRY ON SIZE bag when I didn't pay for it on my first flight and brought it on the plane?!?!? Screwing everyone out of money during the holidays smh #boycottAa",
+      "Hit Gold status and I’m still Group 6? Hey <user> , what gives? What’s the benefit of Gold if I’m still fighting for the overhead? <url>",
+      "<user> I am madder than Hell! Why are you treating me like this? When you do well I always compliment you, but you eff up and all I get is \"Sorry.\" WTF!!!! LAME!!! FIX THIS NOW!!!!!!",
+      "<user> They can’t. Just suggesting another policy some other airlines use to ease travel.",
+      "<user> your costumer service employees <user> are the worst ever!!!!",
+      "<user> can you please have someone get my nephews stroller?"
+    ],
+    "proposed": {
+      "name": "request assistance",
+      "description": "Customers are asking the airline for help or assistance with various issues such as accessibility, baggage, loyalty benefits, or service problems.",
+      "distinct_from": "complain about service"
+    }
+  },
+  {
+    "cluster": 4,
+    "size": 28,
+    "top_terms": "thank, user thank, thank user, appreciate, user finally, assistance, url, finally, best, boston, response, sent",
+    "examples": [
+      "Greatest flight and 10 mins early. Thank you <user> and hello, Boston!",
+      "<user> Sent! Thank you kindly for your time. AA reps at BWI should offer the same.",
+      "<user> Thank you for the information provided. #PuertoRicoSeLevanta 🇵🇷",
+      "Probably shouldn't have been running the <user> with a heel spur, but I'd do it all again. Thank you <user> for the help. <url>",
+      "<user> Thank you for doing the right thing. Would recommend this treatment when issue first arises. Tkt Counter 🙂",
+      "<user> Ok, thank you",
+      "<user> I would like to thank your Call Center in MTY for their assistance and professionalism! Extend the thanks to your SKB GM!",
+      "Wheels up for my son’s sixth flight in his six months! Thank you <user> ! See ya in Philly for the next leg of this crazy trip."
+    ],
+    "proposed": {
+      "name": "thank user",
+      "description": "Customer expresses gratitude toward the airline representative for assistance or service.",
+      "distinct_from": "request assistance"
+    }
+  },
+  {
+    "cluster": 5,
+    "size": 34,
+    "top_terms": "got, ve, user ve, employee, plane, finally, waiting, finally got, gate, user got, claim, instead",
+    "examples": [
+      "hands down <user> is the best airline I’ve flown with🙌🏼",
+      "<user> Yes, I filed it on Monday, lost Report ID: <num> . I got this automated response yesterday. Your employee confirmed they had it, now this? <url>",
+      "<user> Best Service by Colleen Walker, Denise Miller, Nadia Ryan, Noreen Isbrandt. Left my keys in rental - they went and got them!",
+      "Just got in from a wonderful 2.5 days in Dallas learning what it takes to be an effective leader. I ❤️ that <user> invests in us.",
+      "<user> It’s also incredible to me that I couldn’t hear my pilot talking, he was almost inaudible, but I got woken up for this weird travel synergy.",
+      "<user> <user> I'm waiting on my response. Got refund? Why is it when anything else doesn't meet consumer standards we can return or have some recourse? Just sayn.",
+      "<user> I’ve spent as much time waiting for maintenance on the plane as I have in the air this trip",
+      "From <user> employee manual: when you see a gal crying on the floor, do not help. Instead call police to have her removed from airport"
+    ],
+    "proposed": {
+      "name": "get refund",
+      "description": "Customer confirms they have received a refund they were waiting for.",
+      "distinct_from": "request refund"
+    }
+  },
+  {
+    "cluster": 6,
+    "size": 49,
+    "top_terms": "flight num, flight, user flight, num, delayed, just, aa flight, gate, missed, flight flight, new, vegas",
+    "examples": [
+      "<user> Can we please get an update on our flight <num> Dallas ---&gt; MKE. No one seems to know anything 😒",
+      "I just missed a <user> flight so had to cancel and rebook with <user> . Both gave me great service, and there's no irony!",
+      "<user> you left me stranded in Charlotte yesterday. You better keep flight <num> from DFW I can get off <num> so I can get home!! 🙁",
+      ". <user> bungled flight <num> PHX-TUS today. Missed my meeting. Whole flight full of angry ppl with missed events due to delays. 😡",
+      "Just had the most amazing flight on <user> <flight> . A HUGE amount of love to Julie &amp; Lisa ❤️ You spoilt us honeymooners! Thank you 😘😘😘",
+      "<user> flight <num> cancels to Dayton and the agent says go away and points to a line with 75 people, really?!",
+      "<user> Correction, flight <num> . Props need to go to the right people. I bet <num> are all super nice people.",
+      "Hooray <user> we are so excited to be onboard AA flight <num> with such an awesome FA Viviano! #gigifliesAA <url>"
+    ],
+    "proposed": {
+      "name": "check flight status",
+      "description": "Customer wants to know the current status or updates for a specific flight.",
+      "distinct_from": "report delay"
+    }
+  },
+  {
+    "cluster": 7,
+    "size": 30,
+    "top_terms": "seat, window, flight, pay, middle seat, middle, just, aa, user just, away, way, map",
+    "examples": [
+      "<user> But you want to collect revenue for my seat, a change fee if I modify, then sell that same seat again. You’re selling that seat twice.",
+      "When <user> tries to rip you off with seat selection",
+      "Shout out to the nicest guy at Gate F25 in Philly airport <user> . I found my iPad!! Who knew I had it in my seat pocket ready to go!",
+      "What a great “window” seat. Thanks <user> !! Why can’t a prompt be set when you choose 10A? Warning: window seat doesn’t have WINDOW! <url>",
+      "AA may have the tightest seat config of any airline! Never felt so packed in! We are sardines <user> #morecompetitionplease",
+      "<user> pay to check a bag that won’t fit under a seat AND pay to upgrade to a window seat? After AA changed my seat to a middle seat although I chose window? Really? #mightaswellflownspirit #atleasthideitinthecost #lostcustomer",
+      "Trying to select my seat with <user> and all I keep getting is \"We are experiencing technical difficulties.\" Grrr.",
+      "<user> what's the point of being priority gold, if you get bumped from your selected seats, placed in the back of the plane, &amp; separated from your seat mate? # <flight>"
+    ],
+    "proposed": {}
+  },
+  {
+    "cluster": 8,
+    "size": 43,
+    "top_terms": "flight, delayed, flight user, flight delayed, day, user delayed, cancelled, delayed flight, user flight, hours, cancelled flight, work",
+    "examples": [
+      "<user> Big thanks to Laura B. &amp; L.T. from Chicago Premium Services for their help in rebooking me on Friday night due to my delayed flight and missing my connection. They were so nice despite being really busy. They truly made my travel experience enjoyable.",
+      "<user> SEA to CLT <flight> departing on the 21",
+      "I think the rudest stewards and stewardesses are chosen to work the Haiti flight for <user> . #screenworkerswhohavegrace #andpatience",
+      "<user> <flight> delayed...they filled the hydraulic fluid too much???? why is it every flight I take with you is delayed for silly reasons. So frustrated with your airline.",
+      "Thoroughly enjoyed <user> last night courtesy of <user> . Made up for a delayed (but well handled) departure...",
+      "Wow <user> ! Delayed flight &amp; delayed arrival... I've been stuck on this plane for 44 mins on the runway! I have places to be.",
+      "<user> That's has been done, how about compensation for our wasted flight and day of work!",
+      "<user> 3/ sometimes it would make more sense to pony up and get a stranded passenger on a direct flight the next day on delta. Pony up."
+    ],
+    "proposed": {
+      "name": "request compensation",
+      "description": "Customer wants compensation for inconvenience caused by a delayed or cancelled flight.",
+      "distinct_from": "report delay"
+    }
+  },
+  {
+    "cluster": 9,
+    "size": 42,
+    "top_terms": "flights, user flights, flights user, flight, aa, just, trying, help, missed, stuck, home, booked",
+    "examples": [
+      "<user> Now my 7:15 flight is showing 7:55 because of a late flight attendant. No incoming flights, just late. I don't have to connect but lots do",
+      "<user> please get your act together. 4 flights scheduled-3 had delays and the last one left early. #strandedincharlotte #godelta <url>",
+      "Had a dozen flights this week with Delta and Southwest and not a single issue. Both flights especially the current one on <user> suck!",
+      "<user> My employer picks my flights. So I’m stuck with you. I have plenty of other options, and I may need to talk to my employer about getting a different airline to handle my flights in <num> .",
+      "<user> These flights keep on delaying as my flight just got pushed back AGAIN a couple of minutes ago.",
+      "<user> - Your new $75 policy for standby will loose your loyal customers and is unnecessary if you have flights that will go out empty",
+      "Looks like it might not be the merriest of holidays for some travelers. <user> lets too many pilots off for Christmas, leaving 15, <num> flights without a pilot. <url>",
+      "<user> are flights from Geargetown Exuma still canceled? Trying to get Home."
+    ],
+    "proposed": {
+      "name": "report delay",
+      "description": "Customer reports that their flight is delayed, changed, or causing them to be stuck and seeks information or assistance.",
+      "distinct_from": "request rebooking"
+    }
+  },
+  {
+    "cluster": 10,
+    "size": 35,
+    "top_terms": "crew, flight crew, flight, crew flight, great, cabin, understand, day, num, crew member, ground crew, thank",
+    "examples": [
+      "<user> It's 5:50 for now...until 5:50 comes and your crew still hasn't gotten it together",
+      "<user> stopped traveling with them for a month, went back today, hour delayed for crew rest and maintenance #missedconnection again! Back to <user>",
+      "LAS - PHL <num> 1135am <user> not 1 smile between the whole crew &amp; your terminal for PHL-DUB flight is awful!",
+      "<user> excellent flight crew last night.",
+      "In <num> , real time re-routing of crew ought to be a thing. Sadly, <user> isnt even transparent w/gate agents with clear info. 👎👎 <url>",
+      "# <ref> great flight SYR - DCA Flight crew amazing, friendly,competent Ground crew got us re-routed kept us informed Great job <user>",
+      "Another great day of traveling with <user> . First they wouldn’t allow me to take an early flight that had availability, even though I was willing to pay for it. Then no wifi on the later flight. The crew was no help, but all is good, they made sure to pitch the CC apps!",
+      "<user> well, if this was some unforeseen event, I'd understand. \"Crew availability\"? Thanks to you, I'll miss Election Day tomorrow."
+    ],
+    "proposed": {
+      "name": "report crew issue",
+      "description": "Customer comments on the performance, availability, or behavior of flight or ground crew.",
+      "distinct_from": "report delay"
+    }
+  },
+  {
+    "cluster": 11,
+    "size": 42,
+    "top_terms": "num, user num, wifi, num num, flight, flt num, new, stop, flt, think, reasonable, plane",
+    "examples": [
+      "Boarding now. Next stop: DFW. Customary pre-flight hoofbump to <user> , whose pegasi are swift and somehow equipped with WiFi.",
+      "<user> <num> . when will we land now? also do we get wifi on this flight?",
+      "<user> :( AAL <num> out of AUS is making me sad",
+      "<user> It was <num> not <num> ....but that plane needs a tune up....tons of older ppl on our plane suffering",
+      "<user> <num> . Why? How many planes are you having toilet problems on?",
+      "<user> <num> to austin",
+      "<user> captain welcomes passengers from the cabin on flt <num> . #MicDrop #killingit #stayhumble <url>",
+      "<user> I appreciate the food and gesture, but why is flt <num> delayed for 4+ hours when flt <num> goes on time? #Weather delays we are told- pls explain <url>"
+    ],
+    "proposed": {
+      "error": "ValueError: not JSON: 'We need to infer the intent from the messages. The top terms: num, user num, wifi, num num, flight, flt num, new, stop, flt, think, reasonable, plane.\\n\\nMessages include: boarding now, next stop DFW, p'"
+    }
+  },
+  {
+    "cluster": 12,
+    "size": 45,
+    "top_terms": "user user, url, didn, wait, best, just, tickets, ask, way, time, ones, thanks",
+    "examples": [
+      "<user> <user> any updates on why the flight from LA can’t deboard a half empty plane at 1am? Or at least share an update? #AlsoWater",
+      "<user> <user> - when a CSR states “that’s not my job” - in a service industry that is a problem. All on their phones - awful",
+      "When you regret cheating on <user> with <user> because they literally just unboarded the plane with no plan or next steps",
+      "<user> <user> changed the flight time for a connecting flight in MIA for SXM. Now you're making us foot hotel bill for missed connection.",
+      "<user> <user> Do u think oct 8 is long enough? Some People won't be able to get to the airports by then! I can't even reach my family",
+      "Dang, I just noticed that I’ve traveled the equivalent of four trips around the earth (along the equator) this year! (cc: <user> <user> ) #innovation #community <url>",
+      "<user> <user> <user> would you take care of your passengers with #free #cocktails ?",
+      "<user> Yeah? What other flights do you have to BOS tonight from PHX? You guys shouldn’t put up with this B.S. from <user> . <user>"
+    ],
+    "proposed": {
+      "name": "request update",
+      "description": "Customers are asking for information or updates about flight delays, deboarding, or rebooking options.",
+      "distinct_from": "claim compensation"
+    }
+  },
+  {
+    "cluster": 13,
+    "size": 44,
+    "top_terms": "today, doesn, flight, url, time, great, dfw, fly, just, san, service, upgrade",
+    "examples": [
+      "A big shoutout to the <user> gate agents in BOI for being so kind today",
+      "<user> how do you see if a flight was booked with refundable tickets? Doesn't say on the app",
+      "<user> flying to MSY today and out on Sunday. Hurricane landfall expected at same time. Help! Being penalized",
+      "<user> Monitoring mom’s flight out of LaGuardia. Original departure time of 1 pm now pushed back to 5. Will her plane leave today?",
+      "I get to fly on <flight> AUS-ORD today (yay!) and have a question for <user> : Why is the *incoming* flight, ORD-AUS, ALSO <num> ? Same #.",
+      "<user> Again stuff that doesn't work <flight> LAX-SYD entertainment system freezes, reset over and over again!! YUP ExP in 18H unhappy!!! <url>",
+      "<user> what’s the cause of delay for flight <flight> SAN to PHX today?",
+      "<user> Seasonal limitation doesn't apply. Today is Nov 5 <url>"
+    ],
+    "proposed": {
+      "name": "check flight status",
+      "description": "Customer wants to know the current status, delay cause, or timing of a specific flight.",
+      "distinct_from": "request rebooking"
+    }
+  },
+  {
+    "cluster": 14,
+    "size": 53,
+    "top_terms": "amp, did, issue, ve, user did, plane, min, oh, maintenance, flight, maintenance issue, url",
+    "examples": [
+      "<user> It’s important that we get to Phx 10/27. Our plane from LIH was diverted to HNL &amp; it really is not cool that CS can’t help.",
+      "Dear <user> , stuck in the wrong city due to fog &amp; fuel. #sadday #heartbroken #losingadayofvaycay 😭 Sincerely, squished passenger",
+      "Kudos to the <user> pilot that had the smoothest landing I’ve experienced",
+      "<user> You tell me. I’ve already had the bad experiences.",
+      "The <user> rep just hung up on me &amp; I’m calling right back. Deondre think he’s slick. #illneverflyamericanagain",
+      "<user> great way to run an airline. Dec 2 &amp; already pilot-less flight!",
+      "Is anyone else having issues with the <user> app? I've uninstalled &amp; reinstalled but I still get a black screen when I open the app??",
+      "i’ve spent years in denial of how blind i really am &amp; all it took was <user> losing my glasses for me to really come to terms with it"
+    ],
+    "proposed": {
+      "name": "report maintenance",
+      "description": "Customer wants to report a maintenance problem affecting their flight or aircraft.",
+      "distinct_from": "report delay"
+    }
+  },
+  {
+    "cluster": 15,
+    "size": 33,
+    "top_terms": "check, user check, bag, carry, dm, space, overhead, url, agent, check bag, gate, customers",
+    "examples": [
+      "<user> , gate agent lied about bin space being full; had to gate check my small roller with 30% space left. Customers first?",
+      "<user> you should check in on <user> service to your customers. It isn’t anything to be proud about! #unhappyconsumer",
+      "Are you kidding me <user> ?! You make me check my bag and then it comes out on the belt like this?! <url>",
+      "<user> Its Dom. Will that TSA form be sufficient enough to be able to check-in/check my bag tomorrow morning? Or do I need a police report as well?",
+      "Thanks LAX <user> gate agent who made groups 6 + check bags on red eye to Chicago. At least 50% of overhead is empty. <url>",
+      "<user> Wait you tell me you have to valet check your carry on but there's overhead space that I could've put my backpack in? Ugh this airline.",
+      "<user> 1. There’s no restriction on the Orbitz site about $50. 2. No where on the ticket said you need to check your carry-on bag at the ticket counter as oppose to the gate (which is the way all other airlines do it).",
+      "<user> I'm diabetic and plan on bringing granola bars or trail mix or something for my blood sugar on our flight to Hawaii. Do we have to go through a different security check for that?"
+    ],
+    "proposed": {
+      "name": "check bag",
+      "description": "Customer wants to verify or request that their carry‑on bag be checked at the gate or counter due to overhead space concerns or policy confusion.",
+      "distinct_from": "claim baggage"
+    }
+  },
+  {
+    "cluster": 16,
+    "size": 42,
+    "top_terms": "need, rude, user need, staff, flight, need better, just, email, cancel, better, use, hey",
+    "examples": [
+      "<user> shit of service in Chile!!! Need to coordinate my special food for all my family and nobody answers the phone????!!!",
+      "<user> There is none. Rebook me. I am getting off..need upgrade",
+      "<user> I recently flew on your aircraft &amp; 1 of your pilots flew first class and was rude because I moved his luggage so mine would fit",
+      "<user> So the rude staff was complimentary?",
+      "Lack of competition in the airline industry allows <user> to treat loyal, paying customers like dirt. Need a solution. #AirTravel",
+      "Hey <user> , you need to update these old <user> planes. Crazy that 2.5-hr PHX-IAH flight has zero space for *any* roll aboards.",
+      "<user> absolutely shocking! Never ever again! Useless and rude staff and to top it all off I now have to spend a 5hr flight by myself thanks to your incompetent staff ...well done!",
+      "<user> email grants then rescinds flyer loyalty status. #bad-American-air. Airlines need #government-regulation. #flyers-rights"
+    ],
+    "proposed": {
+      "error": "ValueError: not JSON: 'We need to produce JSON with name (verb + noun, lowercase, 2-3 words), description (one sentence), distinct_from (nearest other intent this could be confused with). Based on messages: many about rude '"
+    }
+  },
+  {
+    "cluster": 17,
+    "size": 84,
+    "top_terms": "url, user url, flight, flight url, ride, plane, new, user flight, americanview, lounge, thanks, christmas",
+    "examples": [
+      "<user> same again moved from main cabin to what I was told was Econ prem ! Same service none of the online items ! Same food <url>",
+      "HAPPY HALLOWEEN!!!!! <user> <url>",
+      "I wound up renting a car and driving to Columbia from Charlotte. <user> <url>",
+      "Oh, my bad... this was supposed to be directed at you, <user> 😡 <url>",
+      "Great view from my <user> #windowseat at 10, <num> feet after leaving <user> . #AsSeenInColumbus #AmericanView <url>",
+      "One flight down, one more to go! Mimi, we're on our way! Thanks for a smooth ride <user> <url>",
+      "I'm very much a \"credit where credit is due\" kinda guy. And <user> deserves a lot of credit for what it's doing with its Flagship Lounges at its hubs. <url>",
+      "Neil and I have matching Christmas decorations. He has cooler shades. <user> #HappyHolidays <url>"
+    ],
+    "proposed": {
+      "name": "share flight url",
+      "description": "Customer posts a URL related to their flight experience, such as a photo, article, or update.",
+      "distinct_from": "report issue"
+    }
+  },
+  {
+    "cluster": 18,
+    "size": 24,
+    "top_terms": "seats, plane, flights, booked, boarded, user told, amp, people, assigned, away, flight, aren",
+    "examples": [
+      "Oh how I wish the #AAGold benefit of same say change on <user> reallyl worked.. seats online but nothing to move 2 golds to",
+      "<user> Thank you for reply. Is there anyway to look at upgrading seats prior to check in?",
+      "<user> Nice someone reads these tweets BUT 2 late. Booked w #Delta Ur website lures in w/ a faulty rate; \"seats assigned at checkin, board in last grp\". It is BS. Should be 1st class/Business or econmy. PERIOD. Insulting to ppl who aren't rich.",
+      "Turns out <user> &amp; <user> wont keep seats booked at same time together wo paying an upgraded charge now! #Ridiculous #moneyhungry",
+      "<user> u were delayed 2 hrs on my outbound flt repairing seats in first class at departure! U delayed a wc veteran!",
+      "<user> all the poor people shoved in the back of the plane, while tons of $ seats are empty in the front. <url>",
+      "<user> traveled 3 flights in 1 month. cancelling CC card and not booking again Small seats, packed light fish ,even exit seats cramped",
+      "And when will all long flights have outlets in the seats?! <user>"
+    ],
+    "proposed": {
+      "name": "request seat upgrade",
+      "description": "Customers ask to upgrade, change, or inquire about seat assignments and availability before or after booking.",
+      "distinct_from": "report delay"
+    }
+  },
+  {
+    "cluster": 19,
+    "size": 35,
+    "top_terms": "american, flying, american airlines, airlines, user flying, flying american, week, airline, country, worst, boy, air",
+    "examples": [
+      "<user> Planned on flying across country direct from JFK to SFO and driving to Sonoma - now that trip is in jeopardy and want to charge me $ <num>",
+      "<user> Just received my bag 2 mins ago. Never flying with <user> again. Telling friends/colleagues of your poor service",
+      "Anyone with American Aadvantage miles they won't use and would like to gift? Trying to book a family vacation but coming up short. #AmericanAirlines #Aadvantage #Miles ✈️",
+      "Anyway, this was a terrible way to start my work week, <user> . Hopefully my shoes and cloths will dry quickly. Next week I fly to Disney, so you can redeem yourself. For now, I’m avoiding American Eagle through CLT until I know things have changed. #millionmiler #platinum",
+      "American Airlines is the WORST!!!!!!!!!!!!!!!!!!! I️ can’t believe how disrespectfully I️ was treated, as a 15 year “loyalty “ member. FURIOUS!! <user>",
+      "<user> I have not heard any response from email submission on September 23 regarding a complaint due to my cancelled American Airline flight on Sept 21, <num> from Munich, Germany to Philadelphia.",
+      "<user> Sitting here in Detroit, flying to Philly at 6:05pm, but I'm 5 hours early! Any chance you can bump me to the 3:30pm flight? I'm an AA member! 😇😇😇😇",
+      "Very disappointed in <user> the service was terrible, won't be flying 🛩with them anymore"
+    ],
+    "proposed": {
+      "name": "complain service",
+      "description": "Customer expresses dissatisfaction with American Airlines service and indicates they will not fly again.",
+      "distinct_from": "request refund"
+    }
+  }
+]

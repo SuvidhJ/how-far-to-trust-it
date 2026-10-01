@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support Agent Replay</title>
+<meta name="description" content="A Twitter customer-support agent for AmericanAir, replayed out of fold on 218 hand-labelled messages, with the evaluation that says how far to trust it.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --surface-2: #f3f2ee;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #6f6d67;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.10);
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-1-wash: rgba(42, 120, 214, 0.10);
+  --good: #0ca30c;
+  --good-ink: #006300;
+  --warning: #fab219;
+  --warning-ink: #8a5a00;
+  --critical: #d03b3b;
+  --critical-ink: #b02a2a;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #9a988f;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-1-wash: rgba(57, 135, 229, 0.16);
+    --good-ink: #0ca30c;
+    --warning-ink: #fab219;
+    --critical-ink: #e66767;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #232321;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --muted: #9a988f;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255, 255, 255, 0.10);
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-1-wash: rgba(57, 135, 229, 0.16);
+  --good-ink: #0ca30c;
+  --warning-ink: #fab219;
+  --critical-ink: #e66767;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--series-1); }
+h1, h2, h3 { line-height: 1.25; margin: 0; }
+h1 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -0.01em; }
+h2 { font-size: 22px; margin-bottom: 6px; }
+h3 { font-size: 15px; }
+p { margin: 0 0 10px; }
+.lede { color: var(--ink-2); font-size: 17px; max-width: 760px; margin-top: 12px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+
+header { padding: 40px 0 24px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; font-size: 14px; }
+section { padding: 28px 0; border-top: 1px solid var(--border); }
+.section-intro { color: var(--ink-2); max-width: 760px; margin-bottom: 18px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+/* stat tiles */
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tile .label { font-size: 13px; color: var(--ink-2); }
+.tile .value { font-size: 34px; font-weight: 600; letter-spacing: -0.01em; margin: 4px 0 2px; }
+.tile .value .of { font-size: 16px; font-weight: 400; color: var(--muted); }
+.tile .sub { font-size: 13px; color: var(--muted); }
+@media (max-width: 900px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .tiles { grid-template-columns: 1fr; } }
+
+/* replay */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.chip {
+  font: inherit; font-size: 13px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 5px 12px; cursor: pointer;
+}
+.chip:hover { background: var(--surface-2); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.search {
+  font: inherit; font-size: 14px; flex: 1 1 200px; min-width: 0;
+  padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink);
+}
+.replay { display: grid; grid-template-columns: 340px 1fr; gap: 14px; align-items: start; }
+@media (max-width: 860px) { .replay { grid-template-columns: 1fr; } }
+.list { max-height: 720px; overflow-y: auto; padding: 6px; }
+@media (max-width: 860px) { .list { max-height: 300px; } }
+.item {
+  display: block; width: 100%; text-align: left; font: inherit; color: inherit;
+  background: none; border: 0; border-radius: 8px; padding: 9px 10px; cursor: pointer;
+}
+.item:hover { background: var(--surface-2); }
+.item[aria-current="true"] { background: var(--series-1-wash); }
+.item .t { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.item .m { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; gap: 8px; flex-wrap: wrap; }
+.count { font-size: 13px; color: var(--muted); padding: 4px 10px 8px; }
+
+.tweet { font-size: 17px; line-height: 1.5; margin: 6px 0 4px; overflow-wrap: anywhere; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+@media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+.kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
+.status { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.status svg { flex: none; }
+.status.good { color: var(--good-ink); }
+.status.warn { color: var(--warning-ink); }
+.status.bad { color: var(--critical-ink); }
+.reason { color: var(--ink-2); font-size: 14px; margin-top: 4px; }
+.post { display: grid; grid-template-columns: minmax(90px, 150px) 1fr 44px; gap: 8px; align-items: center; font-size: 13px; margin: 4px 0; }
+.post .bar { height: 8px; background: var(--grid); border-radius: 4px; overflow: hidden; }
+.post .bar i { display: block; height: 100%; background: var(--series-1); border-radius: 0 4px 4px 0; }
+.post .v { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.post .name { overflow-wrap: anywhere; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 10px; }
+.draft { background: var(--surface-2); border-radius: 8px; padding: 12px 14px; font-size: 15px; overflow-wrap: anywhere; }
+.scores { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+.pips { display: inline-flex; gap: 3px; vertical-align: middle; margin-left: 4px; }
+.pips i { width: 14px; height: 6px; border-radius: 3px; background: var(--grid); }
+.pips i.on { background: var(--series-1); }
+.evidence { list-style: none; padding: 0; margin: 0; }
+.evidence li { padding: 10px 0; border-top: 1px solid var(--border); font-size: 14px; }
+.evidence li:first-child { border-top: 0; }
+.evidence .q { color: var(--muted); overflow-wrap: anywhere; }
+.evidence .a { overflow-wrap: anywhere; }
+.tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink-2); }
+.note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+/* charts */
+.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 860px) { .charts { grid-template-columns: 1fr; } }
+.chart h3 { margin-bottom: 2px; }
+.chart .desc { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+.plot { width: 100%; }
+.plot svg { display: block; width: 100%; height: auto; overflow: visible; }
+.plot text { font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--ink-2); }
+.plot .tick { fill: var(--muted); font-variant-numeric: tabular-nums; }
+.plot .grid { stroke: var(--grid); stroke-width: 1; }
+.plot .axis { stroke: var(--axis); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; color: var(--ink-2); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+details { margin-top: 10px; font-size: 13px; }
+summary { cursor: pointer; color: var(--ink-2); }
+table { border-collapse: collapse; width: 100%; margin-top: 8px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { font-weight: 600; color: var(--ink-2); }
+.table-scroll { overflow-x: auto; }
+.tip {
+  position: fixed; pointer-events: none; z-index: 10; max-width: 280px;
+  background: var(--ink); color: var(--page); font-size: 12px; line-height: 1.45;
+  padding: 7px 9px; border-radius: 6px; opacity: 0; transition: opacity 80ms;
+}
+.caveats { padding-left: 20px; margin: 0; max-width: 820px; }
+.caveats li { margin-bottom: 10px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+footer { padding: 28px 0 48px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<script id="data" type="application/json">__DATA__</script>
+
+<header class="wrap">
+  <div class="kicker">Customer support on Twitter · evaluation first</div>
+  <h1>A support agent for <span id="brand"></span>, and how far to trust it</h1>
+  <p class="lede">It reads a customer's tweet, classifies what they want, drafts a reply
+  from how the brand answered similar messages before, and then either sends the reply
+  itself or hands it to a person with a stated reason. Most of the work went into the
+  proof: hand-labelled data, two baselines, an independent LLM annotator, and a list of
+  what the numbers do not show.</p>
+  <div class="links">
+    <a href="https://github.com/__REPO__">Code on GitHub</a>
+    <a href="https://github.com/__REPO__/blob/main/reports/REPORT.md">Full report</a>
+    <a href="https://github.com/__REPO__/blob/main/reports/DECISIONS.md">Decision log</a>
+  </div>
+</header>
+
+<main>
+<section class="wrap" aria-labelledby="h-numbers">
+  <h2 id="h-numbers" class="sr-only">Headline numbers</h2>
+  <div class="tiles" id="tiles"></div>
+</section>
+
+<section class="wrap" aria-labelledby="h-replay">
+  <h2 id="h-replay">Replay the agent</h2>
+  <p class="section-intro">All 218 hand-labelled messages. Each one was classified by a
+  model that <em>never saw it during training</em> (out-of-fold), and the drafts and judge
+  scores are the ones the evaluation actually scored, replayed from a committed cache.
+  Pick a message to see what the agent would do.</p>
+  <div class="filters" role="group" aria-label="Filter messages">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="auto" aria-pressed="false">Sent without a human</button>
+    <button class="chip" data-f="esc" aria-pressed="false">Escalated</button>
+    <button class="chip" data-f="wrong" aria-pressed="false">Intent misread</button>
+    <input class="search" id="q" type="search" placeholder="Search tweets" aria-label="Search tweets">
+  </div>
+  <div class="replay">
+    <div class="card list" id="list" role="listbox" aria-label="Messages"></div>
+    <div class="card" id="detail" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-trust">
+  <h2 id="h-trust">How far to trust it</h2>
+  <p class="section-intro">The four charts behind the verdict: trust it as a triage-and-draft
+  assistant for a human agent, not as an autonomous responder.</p>
+  <div class="charts">
+    <div class="card chart">
+      <h3>The number a careless setup would have quoted</h3>
+      <p class="desc">Intent score with each shortcut undone. Every shortcut here was actually run.</p>
+      <div class="legend"><span><i style="background:var(--series-1)"></i>Reported (audited)</span><span><i style="background:var(--series-2)"></i>With the shortcut</span></div>
+      <div class="plot" id="c-waterfall"></div>
+      <details><summary>Table, including the drafting and retrieval shortcuts</summary><div class="table-scroll" id="t-waterfall"></div></details>
+    </div>
+    <div class="card chart">
+      <h3>When it sends alone, how often it is wrong</h3>
+      <p class="desc">Each point is a confidence threshold. Lower-left is safer and sends less.</p>
+      <div class="plot" id="c-routing"></div>
+      <details><summary>Table</summary><div class="table-scroll" id="t-routing"></div></details>
+    </div>
+    <div class="card chart">
+      <h3>Recall per intent</h3>
+      <p class="desc">Share of each intent's messages labelled correctly, with 95% Wilson intervals.</p>
+      <div class="plot" id="c-classes"></div>
+      <details><summary>Table</summary><div class="table-scroll" id="t-classes"></div></details>
+    </div>
+    <div class="card chart">
+      <h3>Which drafter writes a sendable reply</h3>
+      <p class="desc">Share an LLM judge would send, with 95% Wilson intervals.</p>
+      <div class="legend"><span><i style="background:var(--series-1)"></i>Judge says sendable</span><span><i style="background:var(--series-2)"></i>…and no unfilled placeholder</span></div>
+      <div class="plot" id="c-drafting"></div>
+      <details><summary>Table</summary><div class="table-scroll" id="t-drafting"></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-caveats">
+  <h2 id="h-caveats">What these numbers do not show</h2>
+  <p class="section-intro">The most important part of the evaluation. Full version in
+  section 4 of the report.</p>
+  <ol class="caveats" id="caveats"></ol>
+</section>
+</main>
+
+<footer class="wrap" id="foot"></footer>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+"use strict";
+const D = JSON.parse(document.getElementById("data").textContent);
+const R = D.results;
+const cases = D.cases;
+const NS = "http://www.w3.org/2000/svg";
+
+/* ---------- helpers: build DOM without innerHTML, so tweet text stays text ---------- */
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const kid of kids.flat()) if (kid != null) el.append(kid.nodeType ? kid : String(kid));
+  return el;
+}
+function s(tag, attrs, ...kids) {
+  const el = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs || {})) if (v != null) el.setAttribute(k, v);
+  for (const kid of kids.flat()) if (kid != null) el.append(kid.nodeType ? kid : String(kid));
+  return el;
+}
+const pct = (x, d = 0) => (100 * x).toFixed(d) + "%";
+const f2 = x => x.toFixed(2);
+const f3 = x => x.toFixed(3);
+const pretty = id => id.replace(/_/g, " ");
+function wilson(k, n) {
+  if (!n) return [0, 0];
+  const z = 1.96, p = k / n, d = 1 + z * z / n;
+  const c = (p + z * z / (2 * n)) / d, w = (z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))) / d;
+  return [Math.max(0, c - w), Math.min(1, c + w)];
+}
+function table(head, rows) {
+  return h("table", {}, h("thead", {}, h("tr", {}, head.map(x => h("th", {}, x)))),
+    h("tbody", {}, rows.map(r => h("tr", {}, r.map(x => h("td", {}, x))))));
+}
+const ICON = {
+  good: '<path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  warn: '<path d="M8 2l6.5 11.5h-13z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 6.5v3.2M8 11.6v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+  bad: '<path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+};
+function status(kind, text) {
+  const svg = s("svg", { width: 16, height: 16, viewBox: "0 0 16 16", "aria-hidden": "true" });
+  svg.innerHTML = ICON[kind]; // static markup, never data
+  return h("span", { class: "status " + kind }, svg, text);
+}
+
+/* ---------- derived numbers (all from the payload) ---------- */
+const sys = R.intent["system (embed+logreg)"];
+const simple = R.intent["simple (tfidf+logreg)"];
+const trivial = R.intent["trivial (majority)"];
+const auto = cases.filter(c => c.decision.action === "auto_handle");
+const autoWrong = auto.filter(c => c.pred !== c.gold).length;
+const misread = cases.filter(c => c.pred !== c.gold).length;
+const annot = D.agreement.annotators.find(p => p.b === "nemotron-120b");
+const clf = D.agreement.classifier;
+const arms = D.drafting.arms;
+const gl = arms.grounded_llm, nr = arms.nearest;
+const mc = D.drafting.sendable_mcnemar["grounded_llm vs nearest"];
+
+document.getElementById("brand").textContent = "@" + D.brand;
+
+/* ---------- tiles ---------- */
+function tile(label, value, of, sub) {
+  return h("div", { class: "card tile" }, h("div", { class: "label" }, label),
+    h("div", { class: "value" }, value, of ? h("span", { class: "of" }, " " + of) : null),
+    h("div", { class: "sub" }, sub));
+}
+document.getElementById("tiles").append(
+  tile("Intent, macro-F1 vs my labels", f3(sys.macro_f1_mean), "",
+    `simple baseline ${f3(simple.macro_f1_mean)} · trivial ${f3(trivial.macro_f1_mean)} · n=${sys.n}, 5×5-fold CV`),
+  tile("Agreement with my labels (κ)", f2(clf.kappa), `vs ${f2(annot.kappa)}`,
+    `the classifier vs an independent 120B LLM annotator, n=${annot.n}: the classifier already agrees with me as well as a strong independent reader does`),
+  tile("Sent without a human", String(auto.length), `of ${cases.length}`,
+    `${pct(auto.length / cases.length)} of messages; ${autoWrong} with the wrong intent. Every escalation states a reason`),
+  tile("Drafts an LLM judge would send", pct(gl.sendable / gl.judged), "",
+    `vs ${pct(nr.sendable / nr.judged)} copying the nearest past reply (p=${f3(mc.p)}, n=${mc.n} paired). No human has checked the judge yet`),
+);
+
+/* ---------- replay ---------- */
+const DRAFTERS = [
+  ["grounded_llm", "The agent (grounded LLM)"],
+  ["nearest", "Copy nearest past reply"],
+  ["ungrounded_llm", "LLM, no retrieval"],
+  ["canned", "Canned template"],
+];
+const DIMS = ["grounded", "addresses", "tone", "safe"];
+let filter = "all", query = "", current = null, drafter = "grounded_llm";
+
+function visible() {
+  const q = query.trim().toLowerCase();
+  return cases.filter(c =>
+    (filter === "all" || (filter === "auto" && c.decision.action === "auto_handle") ||
+     (filter === "esc" && c.decision.action !== "auto_handle") || (filter === "wrong" && c.pred !== c.gold)) &&
+    (!q || c.text.toLowerCase().includes(q)));
+}
+function renderList() {
+  const list = document.getElementById("list");
+  const vis = visible();
+  list.replaceChildren(h("div", { class: "count" }, `${vis.length} of ${cases.length} messages`),
+    ...vis.map(c => h("button", {
+      class: "item", role: "option", "aria-current": c === current ? "true" : "false",
+      onclick: () => { current = c; drafter = "grounded_llm"; renderList(); renderDetail(); },
+    }, h("div", { class: "t" }, c.text),
+       h("div", { class: "m" },
+         h("span", {}, c.decision.action === "auto_handle" ? "sent alone" : "escalated"),
+         h("span", {}, pretty(c.pred)),
+         c.pred !== c.gold ? h("span", {}, "✗ misread") : null))));
+  if (!vis.includes(current) && vis.length) { current = vis[0]; renderList(); renderDetail(); }
+}
+function pips(v) {
+  return h("span", { class: "pips", "aria-hidden": "true" }, [0, 1].map(i => h("i", { class: v > i ? "on" : "" })));
+}
+function renderDetail() {
+  const c = current, el = document.getElementById("detail");
+  if (!c) { el.replaceChildren(h("p", { class: "muted" }, "No message matches.")); return; }
+  const right = c.pred === c.gold;
+  const margin = c.top[0][1] - (c.top[1] ? c.top[1][1] : 0);
+  const sent = c.decision.action === "auto_handle";
+  const d = c.drafts[drafter];
+  const j = d.judge;
+  const cited = new Set(c.drafts.grounded_llm.cited);
+
+  let verdict;
+  if (d.error) verdict = status("bad", "No usable draft: " + d.error);
+  else if (!j || j.parse_failed) verdict = status("warn", "The judge's answer could not be parsed");
+  else if (j.sendable && d.placeholder) verdict = status("warn", "Judge: sendable, but it has an unfilled placeholder");
+  else if (j.sendable) verdict = status("good", "Judge: sendable as written");
+  else verdict = status("bad", "Judge: not sendable" + (j.worst_problem ? ": " + j.worst_problem : ""));
+
+  el.replaceChildren(
+    h("div", { class: "kicker" }, `Customer tweet · id ${c.id}` + (c.ambiguous ? " · flagged ambiguous when labelled" : "")),
+    h("p", { class: "tweet" }, c.text),
+    h("div", { class: "row" },
+      h("div", {},
+        h("div", { class: "kicker" }, "Intent"),
+        status(right ? "good" : "bad", pretty(c.pred)),
+        h("div", { class: "reason" }, right ? "matches my label" : `my label: ${pretty(c.gold)}`),
+        h("div", { style: "margin-top:10px" }, c.top.map(([name, p]) =>
+          h("div", { class: "post" }, h("span", { class: "name" }, pretty(name)),
+            h("span", { class: "bar" }, h("i", { style: `width:${(100 * p).toFixed(1)}%` })),
+            h("span", { class: "v" }, f2(p))))),
+        h("div", { class: "reason small" }, `margin between the top two: ${f2(margin)} (threshold 0.10)`)),
+      h("div", {},
+        h("div", { class: "kicker" }, "Decision"),
+        sent ? status("good", "Sent without a human") : status("warn", "Escalated to a person"),
+        h("div", { class: "reason" }, c.decision.reason),
+        h("div", { class: "reason small muted" }, "rule: " + c.decision.rule))),
+    h("div", { style: "margin-top:20px" },
+      h("div", { class: "kicker" }, "Draft reply"),
+      h("div", { class: "tabs", role: "group", "aria-label": "Drafter" }, DRAFTERS.map(([k, label]) =>
+        h("button", { class: "chip", "aria-pressed": k === drafter ? "true" : "false",
+          onclick: () => { drafter = k; renderDetail(); } }, label))),
+      h("div", { class: "draft" }, d.text || "—"),
+      h("div", { class: "scores" },
+        verdict,
+        j && !j.parse_failed ? DIMS.map(k => h("span", {}, `${k} ${j[k]}/2`, pips(j[k]))) : null)),
+    h("div", { class: "row" },
+      h("div", {},
+        h("div", { class: "kicker" }, `What ${D.brand} actually replied`),
+        h("div", { class: "draft" }, c.brand_reply || "—"),
+        h("div", { class: "note" }, "The agent never sees this reply.")),
+      h("div", {},
+        h("div", { class: "kicker" }, "Past exchanges it retrieved"),
+        h("ul", { class: "evidence" }, c.evidence.map(e =>
+          h("li", {},
+            h("div", { class: "small muted" }, `similarity ${f2(e.score)} `, cited.has(e.id) ? h("span", { class: "tag" }, "cited by the draft") : null),
+            h("div", { class: "q" }, "customer: " + e.text),
+            h("div", { class: "a" }, "brand: " + e.reply)))))),
+  );
+}
+document.querySelectorAll(".filters .chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll(".filters .chip").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+  renderList();
+}));
+document.getElementById("q").addEventListener("input", e => { query = e.target.value; renderList(); });
+current = auto[0] || cases[0];
+renderList(); renderDetail();
+
+/* ---------- charts ---------- */
+const tip = document.getElementById("tip");
+document.addEventListener("pointermove", e => {
+  const t = e.target.closest && e.target.closest("[data-tip]");
+  if (!t) { tip.style.opacity = 0; return; }
+  tip.textContent = t.getAttribute("data-tip");
+  const x = Math.min(e.clientX + 14, window.innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px";
+  tip.style.top = (e.clientY + 14) + "px";
+  tip.style.opacity = 1;
+});
+
+function lin(d0, d1, r0, r1) { return v => r0 + (v - d0) / (d1 - d0) * (r1 - r0); }
+
+function waterfall(W) {
+  const rows = D.waterfall.slice(0, 4).filter(r => r.naive != null);
+  const label = { 0: "Keep a duplicated thread and a rubric example", 1: "Quote the best of 25 splits, not the mean",
+                  2: "Quote accuracy on the random stratum", 3: "All three shortcuts together" };
+  const L = 8, Rt = 44, rowH = 52, top = 6, H = top + rows.length * rowH + 24;
+  const x = lin(0.55, 0.75, L, W - Rt);
+  const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Dumbbell chart of the intent score with and without each evaluation shortcut" });
+  for (const t of [0.55, 0.6, 0.65, 0.7, 0.75]) {
+    svg.append(s("line", { class: "grid", x1: x(t), x2: x(t), y1: top, y2: H - 22 }),
+               s("text", { class: "tick", x: x(t), y: H - 6, "text-anchor": "middle" }, f2(t)));
+  }
+  rows.forEach((r, i) => {
+    const y = top + i * rowH + 34, a = +r.audited, n = +r.naive, delta = n - a;
+    const tipText = `${r.step}\nwith the shortcut ${f3(n)} · reported ${f3(a)} · ${delta >= 0 ? "+" : ""}${f3(delta)}\nmetric: ${r.metric}; n: ${r.n}`;
+    const g = s("g", { "data-tip": tipText });
+    g.append(
+      s("rect", { x: 0, y: y - 30, width: W, height: rowH, fill: "transparent" }),
+      s("text", { x: L, y: y - 14, style: "fill:var(--ink)" }, label[i] || r.step),
+      s("line", { x1: x(a), x2: x(n), y1: y, y2: y, stroke: "var(--axis)", "stroke-width": 2 }),
+      s("circle", { cx: x(a), cy: y, r: 5, fill: "var(--series-1)", stroke: "var(--surface)", "stroke-width": 2 }),
+      s("circle", { cx: x(n), cy: y, r: 5, fill: "var(--series-2)", stroke: "var(--surface)", "stroke-width": 2 }),
+      s("text", { x: x(Math.max(a, n)) + 10, y: y + 4 }, `${delta >= 0 ? "+" : ""}${f3(delta)}`),
+    );
+    svg.append(g);
+  });
+  return svg;
+}
+function waterfallTable() {
+  return table(["shortcut", "metric", "with it", "reported", "n"],
+    D.waterfall.map(r => [r.step, r.metric, r.naive == null ? "not run" : f3(+r.naive), r.audited == null ? "—" : f3(+r.audited), String(r.n)]));
+}
+
+function routing(W) {
+  const pts = R.routing_sweep.filter(p => p.coverage > 0).map(p => ({ ...p }));
+  const base = R.routing.error_overall;
+  pts.push({ threshold: null, coverage: 1, error_on_auto: base, errors_caught: 0 });
+  pts.sort((a, b) => b.coverage - a.coverage);
+  const L = 40, Rt = 16, top = 12, B = 34, H = 260;
+  const x = lin(0, 1, L, W - Rt), y = lin(0, 0.4, H - B, top);
+  const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share sent without a human against error rate on those messages, one point per threshold" });
+  for (const t of [0, 0.1, 0.2, 0.3, 0.4]) svg.append(s("line", { class: "grid", x1: L, x2: W - Rt, y1: y(t), y2: y(t) }), s("text", { class: "tick", x: L - 6, y: y(t) + 4, "text-anchor": "end" }, pct(t)));
+  for (const t of [0, 0.25, 0.5, 0.75, 1]) svg.append(s("text", { class: "tick", x: x(t), y: H - B + 16, "text-anchor": "middle" }, pct(t)));
+  svg.append(s("text", { x: (L + W - Rt) / 2, y: H - 2, "text-anchor": "middle" }, "share of messages sent without a human"));
+  svg.append(s("text", { x: L, y: top - 2 }, "wrong intent among those sent"));
+  svg.append(s("polyline", { points: pts.map(p => `${x(p.coverage)},${y(p.error_on_auto)}`).join(" "), fill: "none", stroke: "var(--series-1)", "stroke-width": 2, "stroke-linejoin": "round" }));
+  const n = cases.length;
+  for (const p of pts) {
+    const op = p.threshold === 0.1;
+    const lbl = p.threshold == null ? "send everything" : p.threshold === 0 ? "hard rules only" : `margin ≥ ${f2(p.threshold)}`;
+    const k = Math.round(p.coverage * n);
+    const g = s("g", { "data-tip": `${lbl}\n${k} of ${n} sent alone (${pct(p.coverage)}), ${Math.round(p.error_on_auto * k)} of them with the wrong intent (${pct(p.error_on_auto, 1)})` });
+    g.append(s("circle", { cx: x(p.coverage), cy: y(p.error_on_auto), r: 14, fill: "transparent" }),
+             s("circle", { cx: x(p.coverage), cy: y(p.error_on_auto), r: op ? 6 : 4, fill: op ? "var(--series-1)" : "var(--surface)", stroke: "var(--series-1)", "stroke-width": 2 }));
+    svg.append(g);
+    if (op || p.threshold == null) {
+      svg.append(s("text", { x: x(p.coverage) + (op ? 10 : -8), y: y(p.error_on_auto) + (op ? 18 : -10), "text-anchor": op ? "start" : "end", style: "fill:var(--ink)" },
+        op ? `operating point: ${pct(p.coverage)} sent, ${pct(p.error_on_auto, 1)} wrong` : `send everything: ${pct(p.error_on_auto, 1)} wrong`));
+    }
+  }
+  return svg;
+}
+function routingTable() {
+  return table(["threshold", "sent alone", "wrong among sent", `errors caught (of ${R.routing.errors_total})`, "correct but escalated"],
+    R.routing_sweep.map(p => [f2(p.threshold), pct(p.coverage), p.error_on_auto == null ? "—" : pct(p.error_on_auto, 1), String(p.errors_caught), String(p.wasted_escalations)]));
+}
+
+function classes(W) {
+  const rows = [...R.per_class].sort((a, b) => b.recall - a.recall);
+  const L = 150, Rt = 40, rowH = 26, top = 4, H = top + rows.length * rowH + 22;
+  const x = lin(0, 1, L, W - Rt);
+  const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Recall per intent with 95% intervals" });
+  for (const t of [0, 0.25, 0.5, 0.75, 1]) svg.append(s("line", { class: "grid", x1: x(t), x2: x(t), y1: top, y2: H - 20 }), s("text", { class: "tick", x: x(t), y: H - 5, "text-anchor": "middle" }, pct(t)));
+  rows.forEach((r, i) => {
+    const y = top + i * rowH, cy = y + rowH / 2 - 1;
+    const g = s("g", { "data-tip": `${pretty(r.label)} (n=${r.support})\nrecall ${f2(r.recall)} [${f2(r.ci_low)}, ${f2(r.ci_high)}] · precision ${f2(r.precision)} · F1 ${f2(r.f1)}` });
+    const w = Math.max(0, x(r.recall) - x(0));
+    g.append(
+      s("rect", { x: 0, y, width: W, height: rowH, fill: "transparent" }),
+      s("text", { x: L - 8, y: cy + 4, "text-anchor": "end" }, `${pretty(r.label)} `, s("tspan", { class: "tick" }, `n=${r.support}`)),
+      s("path", { d: `M${x(0)},${cy - 6}h${Math.max(0, w - 4)}a4,4 0 0 1 4,4v4a4,4 0 0 1 -4,4h${-Math.max(0, w - 4)}z`, fill: "var(--series-1)" }),
+      s("line", { x1: x(r.ci_low), x2: x(r.ci_high), y1: cy, y2: cy, stroke: "var(--ink-2)", "stroke-width": 1.5 }),
+      s("text", { x: x(r.ci_high) + 6, y: cy + 4, class: "tick" }, f2(r.recall)),
+    );
+    svg.append(g);
+  });
+  return svg;
+}
+function classesTable() {
+  return table(["intent", "n", "recall [95%]", "precision", "F1"],
+    [...R.per_class].sort((a, b) => b.recall - a.recall).map(r => [pretty(r.label), String(r.support), `${f2(r.recall)} [${f2(r.ci_low)}, ${f2(r.ci_high)}]`, f2(r.precision), f2(r.f1)]));
+}
+
+function drafting(W) {
+  const names = { grounded_llm: "the agent (grounded LLM)", nearest: "copy nearest reply", ungrounded_llm: "LLM, no retrieval", canned: "canned template" };
+  const order = ["grounded_llm", "nearest", "ungrounded_llm", "canned"];
+  const L = 150, Rt = 40, groupH = 50, top = 4, H = top + order.length * groupH + 22;
+  const x = lin(0, 1, L, W - Rt);
+  const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of drafts an LLM judge would send, per drafter" });
+  for (const t of [0, 0.25, 0.5, 0.75, 1]) svg.append(s("line", { class: "grid", x1: x(t), x2: x(t), y1: top, y2: H - 20 }), s("text", { class: "tick", x: x(t), y: H - 5, "text-anchor": "middle" }, pct(t)));
+  order.forEach((k, i) => {
+    const a = arms[k], y0 = top + i * groupH;
+    svg.append(s("text", { x: L - 8, y: y0 + groupH / 2 + 2, "text-anchor": "end" }, names[k]));
+    [["sendable", "var(--series-1)", "judge says sendable"], ["sendable_as_is", "var(--series-2)", "sendable with no unfilled placeholder"]].forEach(([key, color, what], j) => {
+      const v = a[key] / a.judged, ci = a[key + "_ci"], cy = y0 + 13 + j * 16;
+      const w = Math.max(0, x(v) - x(0));
+      const g = s("g", { "data-tip": `${names[k]}: ${what}\n${a[key]} of ${a.judged} judged (${pct(v)}) [${pct(ci[0])}, ${pct(ci[1])}]` });
+      g.append(
+        s("rect", { x: 0, y: cy - 8, width: W, height: 16, fill: "transparent" }),
+        s("path", { d: `M${x(0)},${cy - 6}h${Math.max(0, w - 4)}a4,4 0 0 1 4,4v4a4,4 0 0 1 -4,4h${-Math.max(0, w - 4)}z`, fill: color }),
+        s("line", { x1: x(ci[0]), x2: x(ci[1]), y1: cy, y2: cy, stroke: "var(--ink-2)", "stroke-width": 1.5 }),
+        s("text", { x: x(ci[1]) + 6, y: cy + 4, class: "tick" }, pct(v)),
+      );
+      svg.append(g);
+    });
+  });
+  return svg;
+}
+function draftingTable() {
+  return table(["drafter", "judged", "sendable [95%]", "no placeholder [95%]", "grounded", "addresses", "tone", "safe"],
+    ["grounded_llm", "nearest", "ungrounded_llm", "canned"].map(k => { const a = arms[k]; return [pretty(k), String(a.judged),
+      `${pct(a.sendable / a.judged)} [${pct(a.sendable_ci[0])}, ${pct(a.sendable_ci[1])}]`,
+      `${pct(a.sendable_as_is / a.judged)} [${pct(a.sendable_as_is_ci[0])}, ${pct(a.sendable_as_is_ci[1])}]`,
+      f2(a.mean_grounded), f2(a.mean_addresses), f2(a.mean_tone), f2(a.mean_safe)]; }));
+}
+
+const CHARTS = [["c-waterfall", waterfall], ["c-routing", routing], ["c-classes", classes], ["c-drafting", drafting]];
+function drawCharts() {
+  for (const [id, fn] of CHARTS) {
+    const el = document.getElementById(id);
+    const w = Math.max(280, Math.round(el.clientWidth));
+    if (el.dataset.w === String(w)) continue;
+    el.dataset.w = w;
+    el.replaceChildren(fn(w));
+  }
+}
+document.getElementById("t-waterfall").append(waterfallTable());
+document.getElementById("t-routing").append(routingTable());
+document.getElementById("t-classes").append(classesTable());
+document.getElementById("t-drafting").append(draftingTable());
+new ResizeObserver(drawCharts).observe(document.querySelector(".charts"));
+drawCharts();
+
+/* ---------- caveats ---------- */
+const rt = R.routing;
+const caveats = [
+  `It measures agreement with me. One person wrote the labels and designed the intents after reading the data. A strong LLM annotator agrees with me at κ ${f2(annot.kappa)} [${f2(annot.ci[0])}, ${f2(annot.ci[1])}], about as much as the classifier does (${f2(clf.kappa)}), so pushing the score higher would mostly fit my own reading of borderline tweets. No second human has labelled the set.`,
+  `The sample is not the traffic. Rare intents were over-sampled on purpose so each has enough examples to score; macro-F1 weights a 9-message intent the same as a 38-message one.`,
+  `The dataset has responses, not resolutions. Only a few percent of brand replies get any customer acknowledgement, so nothing here shows a problem was solved. "Sendable" means the reply looks like one the brand would send.`,
+  `The drafting numbers are one LLM's opinion. The judge is from a different model family than the drafter (the same family rated ${pct(D.waterfall.find(r => r.metric.startsWith("sendable")).naive)} of 48 sendable), but no human has checked it yet, and it missed unkept follow-up promises and unfilled placeholders until they were counted separately.`,
+  `Escalation error is measured against my labels on the ${Math.round(rt.coverage * cases.length)} messages the router would auto-handle (the agent sends ${auto.length} of them after its post-draft checks), after two rule changes found or checked on this same data, so it is optimistic. Against the brand's own hand-offs to private messages, the confidence margin carries no signal (AUC ${f2(rt.brand_dm_proxy.low_margin_auc)}).`,
+  `One brand, one collection window. Nothing here transfers to another brand, or to today's policies, without new labels.`,
+];
+document.getElementById("caveats").append(...caveats.map(t => h("li", {}, t)));
+
+document.getElementById("foot").append(
+  h("p", {}, `Every number on this page is read from committed files: reports/results.json, reports/results_naive.json and the replay cases, which CI rebuilds from a clean checkout with no API keys on every push, and reports/annotator_agreement.json, which needs live model calls to rebuild. Built ${D.built_at} from commit ${D.git_sha}. `,
+    "Data: ", h("a", { href: "https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter" }, "Customer Support on Twitter"),
+    " (Thought Vector, CC BY-NC-SA 4.0)."));
+</script>
+</body>
+</html>

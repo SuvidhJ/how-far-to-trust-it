@@ -1,0 +1,1602 @@
+[
+ {
+  "idx": 0,
+  "sha": "5c4b834971",
+  "message": "<user> is it standard for curbside checkin staff to ask for tips? Do you not pay these employees?",
+  "draft": "<user> Agents will request bags to be gate checked to avoid a delay in boarding. However, we don't condone rudeness. We're so sorry, Steve.",
+  "hits": [
+   {
+    "index": 2127,
+    "score": 0.8051002025604248,
+    "id": 2174351,
+    "text": "<user> I checked mine without complaint cause usually they are just full. In this case, the staff was just out of control.",
+    "reply": "<user> Agents will request bags to be gate checked to avoid a delay in boarding. However, we don't condone rudeness. We're so sorry, Steve.",
+    "intent": null
+   },
+   {
+    "index": 524,
+    "score": 0.8028607368469238,
+    "id": 539325,
+    "text": "<user> where is curbside check in at DFW terminal D, please?",
+    "reply": "<user> Curbside Check-in <user> terminal D is available in the lower lever of the terminal.",
+    "intent": null
+   },
+   {
+    "index": 464,
+    "score": 0.8009289503097534,
+    "id": 477307,
+    "text": "<user> refund me my $50 for checking a luggage i was told i didn’t need to check after boarding or give your employees better training. your pick.",
+    "reply": "<user> It sounds like a Basic Economy fare was purchased, which doesn't include a complimentary carry-on bag. Our apology for any misunderstanding.",
+    "intent": null
+   },
+   {
+    "index": 2188,
+    "score": 0.7988437414169312,
+    "id": 2233748,
+    "text": "<user> Oh I never check a bag. I just saw it on the check in screen as an option. Just seems absurd as it's probably more than most tickets ;)",
+    "reply": "<user> The fees aren't usually that high unless you check a third bag. For our elites you're allowed 2 checked bags for free.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 1,
+  "sha": "0ec9baf75f",
+  "message": "Thanks <user> for changing our flight without notifying us #not #4hourlayover #terrible",
+  "draft": "<user> We're sorry for the inconvenience. If you need assistance with your flight change, please call our team at <phone> to review your options.",
+  "hits": [
+   {
+    "index": 1821,
+    "score": 0.9000107049942017,
+    "id": 1810157,
+    "text": "Thanks <user> for canceling our flight w/o any warning or courtesy announcement. Lesson learned. Will fly with them no more!",
+    "reply": "<user> We're sorry to hear your flight was cancelled. If you need help, please call our team at <phone> to check the next best option for you.",
+    "intent": null
+   },
+   {
+    "index": 1051,
+    "score": 0.8935592174530029,
+    "id": 1064235,
+    "text": ". <user> Thx for messing up our 7-hour flight and giving our great seats to someone else. #neveragain!",
+    "reply": "<user> Our apologies, we always try to keep seat assignments the same, although sometimes that's not possible.",
+    "intent": null
+   },
+   {
+    "index": 2282,
+    "score": 0.8915250897407532,
+    "id": 2296710,
+    "text": "Damn <user> you really screwed us over... you changed the flight time and not a single notification? do you realize people had to wake up @ 4am to catch the 7:30 flight, get to the airport and then find out that now ON-TIME flight is actually 4 hours delayed? 😤😤😤",
+    "reply": "<user> We try to keep everyone as up to date as possible, and appreciate your understanding with the long wait.",
+    "intent": null
+   },
+   {
+    "index": 1167,
+    "score": 0.8884443044662476,
+    "id": 1151502,
+    "text": "Surprise surprise <user> messing up my travel again...first antisemitic and now the flight has changed 3X in 2 hours #worstairline",
+    "reply": "<user> What's your flight number, Stephanie? We'd like to see what's going on?",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 2,
+  "sha": "ad396c8ed6",
+  "message": "<user> i swear do your flights ever run on time. Everytime i fly you, my flight is delayed.",
+  "draft": "<user> We're sorry for the repeated delays and understand your frustration. To look into your specific situation, could you please share your flight number?",
+  "hits": [
+   {
+    "index": 765,
+    "score": 0.8968640565872192,
+    "id": 796679,
+    "text": "I swear <user> always has a delay! My last 3-4 flights have all been delayed. I need to stop booking with them.",
+    "reply": "<user> We do our best to always be on time and assure you that's not a pattern we'd care to keep.",
+    "intent": null
+   },
+   {
+    "index": 826,
+    "score": 0.8847886919975281,
+    "id": 863896,
+    "text": "<user> how many times are you going to delay a flight for a late flight attendant, we’re on number 5 currently.",
+    "reply": "<user> We don't like that you've been waiting to depart. What's your flight number, Anthony?",
+    "intent": null
+   },
+   {
+    "index": 74,
+    "score": 0.8833270072937012,
+    "id": 114024,
+    "text": "<user> with the mess today with delays at your fault. Crossing my fingers this flight doesnt get cancelled.",
+    "reply": "<user> Delays are never ideal and we do all we can to avoid cancellations, our apologies. We'll have you on your way as quickly as we can.",
+    "intent": null
+   },
+   {
+    "index": 2216,
+    "score": 0.8821290731430054,
+    "id": 2258660,
+    "text": "<user> Flight has been delayed about 6 times at this point. Either cancel the flight, get me a new one, or compensate me for this inconvenience. HORRIBLE customer service. Won’t be flying your airline again.",
+    "reply": "<user> We'd like to get you an update, what's your flight number?",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 3,
+  "sha": "d28b0ede3a",
+  "message": "<user> <user> Boarding gates 45A and 45B at the same time? Really?",
+  "draft": "We're sorry for the confusion at the gate. Please work with our airport team to get you on board as smoothly as possible.",
+  "hits": [
+   {
+    "index": 336,
+    "score": 0.8839468955993652,
+    "id": 370392,
+    "text": "<user> <user> Gates c27, c29, and c31 all boarding at the same time? What madness is this?",
+    "reply": "<user> We're glad to see you made it! We'll have you #wheelsup just as quickly as we can.",
+    "intent": null
+   },
+   {
+    "index": 429,
+    "score": 0.846423864364624,
+    "id": 430228,
+    "text": "<user> really? A 5 hour delay 9 minutes before we board? This is why I fly <user>",
+    "reply": "<user> We're truly sorry that you're leaving much later than planned. Please work with our team to see all route and options to DFW.",
+    "intent": null
+   },
+   {
+    "index": 1536,
+    "score": 0.8418450355529785,
+    "id": 1535889,
+    "text": "<user> no agent at gate and we're supposed go be boarding. This isn't like AA?? <url>",
+    "reply": "<user> We see it's pulled out of the gate. Please work with our airport team if you aren't on board.",
+    "intent": null
+   },
+   {
+    "index": 2067,
+    "score": 0.8375280499458313,
+    "id": 2108818,
+    "text": "Hey <user> if you want to enforce this boarding by groups don’t call groups together and cause the mad dash you are trying to avoid.",
+    "reply": "<user> We count on our gate team to provide a great and easy boarding experience for all our customers. Thank you for sharing your feedback with us",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 4,
+  "sha": "a082a8231f",
+  "message": "<user> Thank you! Made the start of my week on to remember. Thanks for the great experience! #FlyAmerican",
+  "draft": "<user> It's great to have you fly with us, Fred. We'll keep the engines running for your next trip out.",
+  "hits": [
+   {
+    "index": 2304,
+    "score": 0.884829044342041,
+    "id": 2301676,
+    "text": "<user> Thanks American for my safe and on time travel this week!",
+    "reply": "<user> It's great to have you fly with us, Fred. We'll keep the engines running for your next trip out.",
+    "intent": null
+   },
+   {
+    "index": 1070,
+    "score": 0.8829585909843445,
+    "id": 1074811,
+    "text": "I love flying American Airlines. Always have, always will. Thank you for the upgrade <user> , you guys rock! #bestairline <url>",
+    "reply": "<user> We always love having you soaring through the skies with us, Kristien! Enjoy your flight and weekend.",
+    "intent": null
+   },
+   {
+    "index": 457,
+    "score": 0.8780920505523682,
+    "id": 469045,
+    "text": "I flew <user> back from #SFO and actually had a pleasant experience. Flights were on time, service/attendants were great. A+ experience this time. Much improved. #thanks",
+    "reply": "<user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.",
+    "intent": null
+   },
+   {
+    "index": 469,
+    "score": 0.875511109828949,
+    "id": 487063,
+    "text": "I was annoyed with the confusion w/trying to get off the plane last night... but <user> ’s social media team is hustling out responses and info so rapidly! I appreciate it!!! #flyAmericanAir #thankyou <url>",
+    "reply": "<user> We're here 24/7 to help! Tweet us if you need anything.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 5,
+  "sha": "9205d298f6",
+  "message": "Flight was cancelled, next flight was 2 days later. <user> told me to eat shit and die... Had to rent a car to drive 2 hours home FML.",
+  "draft": "<user> We're so sorry for the cancellation and the inconvenience it caused. We understand this was a difficult experience and we appreciate you bringing it to our attention.",
+  "hits": [
+   {
+    "index": 2101,
+    "score": 0.8671157360076904,
+    "id": 2152597,
+    "text": "What do you know... flight back home was delayed. Probably missing our connecting flight and stuck over night. <user> is so great. 🙃",
+    "reply": "<user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.",
+    "intent": null
+   },
+   {
+    "index": 2827,
+    "score": 0.8637096285820007,
+    "id": 2809148,
+    "text": "<user> 45 minute delay, broken seat on my flight, rude flight attendants. Won't be flying with you again!",
+    "reply": "<user> That's not the experience we wanted you to have. We're sorry for the frustration, Morgan. We hope you'll give us another chance.",
+    "intent": null
+   },
+   {
+    "index": 2269,
+    "score": 0.8615474700927734,
+    "id": 2287156,
+    "text": "<user> didn’t realize you could cancel one flight and you all would cancel my entire trip #shame #badservice",
+    "reply": "<user> Your flights have to be taken in order to retain value. If you're going to not take a flight, we're happy to change your ticket.",
+    "intent": null
+   },
+   {
+    "index": 1240,
+    "score": 0.861422598361969,
+    "id": 1217200,
+    "text": "Another day, another terrible flight with <user> . 3 hours on tarmac 8 total hours on the plane oh and they forgot all food too #fail",
+    "reply": "<user> Delays are certainly something we try hard to avoid. We're sincerely sorry for the longer than expected wait.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 6,
+  "sha": "391450c1bd",
+  "message": "<user> I will never fly with you again! Thanks!!",
+  "draft": "<user> Our team does everything possible to provide a great one, but we're sorry this wasn't the case. What happened?",
+  "hits": [
+   {
+    "index": 2543,
+    "score": 0.9164185523986816,
+    "id": 2518504,
+    "text": "<user> NEVER AGAIN will I fly your airline! The absolute worst experience!",
+    "reply": "<user> Our team does everything possible to provide a great one, but we're sorry this wasn't the case. What happened?",
+    "intent": null
+   },
+   {
+    "index": 2508,
+    "score": 0.9047130346298218,
+    "id": 2494013,
+    "text": "<user> is an awful company that I will never be flying ever again. <user> still love you tho",
+    "reply": "<user> We love having you board with us and don't like hearing you feel this way. How can we help you today, Heather?",
+    "intent": null
+   },
+   {
+    "index": 2459,
+    "score": 0.8929963707923889,
+    "id": 2451028,
+    "text": "<user> Not sure I can ever fly on your airline again after this level of disrespect.",
+    "reply": "<user> The hierarchy of best ginger ale is an age old question but we assure you no disrespect was intended.",
+    "intent": null
+   },
+   {
+    "index": 869,
+    "score": 0.8900724649429321,
+    "id": 896150,
+    "text": "<user> the absolute *worst* airline ever. Will happily never fly with them again!",
+    "reply": "<user> We sure don't like hearing we've disappointed you, Matt. It was our pleasure to have you fly with us today.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 7,
+  "sha": "69c99b5e37",
+  "message": "<user> Took the guitar I was carrying from me so rudly and said that if something happens they don't know and don't care if something happen to it. Even threat me with leaving me on ground for the next flight",
+  "draft": "<user> We're so sorry for the rudeness you experienced. Please meet us in DMs with your record locator and details so we can look into this.",
+  "hits": [
+   {
+    "index": 2012,
+    "score": 0.8625028133392334,
+    "id": 2052704,
+    "text": "<user> come on guys...2 flights in a row, you guys don’t put my bag on the correct flight. Not cool.",
+    "reply": "<user> Oh, no! We're so sorry to hear that happened. Your bag is on the next flight. Please file a claim when you arrive to set up delivery.",
+    "intent": null
+   },
+   {
+    "index": 790,
+    "score": 0.8588841557502747,
+    "id": 824201,
+    "text": "<user> first time flying your airline in 6 years and will be my last. Had to check my carry on that has flown around the world with!",
+    "reply": "<user> Our agents do their best to judge the available space in the overhead bins, we're very sorry you had to check your bag tonight.",
+    "intent": null
+   },
+   {
+    "index": 2708,
+    "score": 0.8565389513969421,
+    "id": 2699885,
+    "text": "<user> never fly this airline again! Fly attendant kicking my son's bag just because we don't understand your rules!",
+    "reply": "<user> What's going on, Allen? Please meet us in DMs with your record locator and details.",
+    "intent": null
+   },
+   {
+    "index": 416,
+    "score": 0.8561887741088867,
+    "id": 416478,
+    "text": "<user> late flight, rude gate staff, have no idea what they are doing. Horrible customer service. Will avoid for future flights",
+    "reply": "<user> These aren't the interactions we want you to have and we're sorry for the rudeness you encountered, Reza.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 8,
+  "sha": "325b84d14c",
+  "message": "<user> , explain to me how you can charge a $ <num> rebooking fee on a $ <num> ticket. Where exactly am I supposed to fly for $3?",
+  "draft": "<user> If you bought a non-refundable ticket and are making voluntary changes at any time, an add collect will apply.",
+  "hits": [
+   {
+    "index": 2958,
+    "score": 0.8948475122451782,
+    "id": 2960849,
+    "text": "<user> $ <num> change fee for a week out to change to an earlier flight? Plus the cost of the new flight? Really?!",
+    "reply": "<user> If you bought a non-refundable ticket and are making voluntary changes at any time, an add collect will apply.",
+    "intent": null
+   },
+   {
+    "index": 1624,
+    "score": 0.8881267309188843,
+    "id": 1625200,
+    "text": "Me: I have to cancel my flight because I can't afford it. <user> : Cool, we're gonna charge you $ <num> to do that.",
+    "reply": "<user> Voluntary changes to a flight can have a change charge and a difference in fare.",
+    "intent": null
+   },
+   {
+    "index": 2389,
+    "score": 0.8764564990997314,
+    "id": 2365012,
+    "text": "<user> The problem with that is, You never do that. You charge an extra $ <num> rebooking fee, plus the cost of the next flight. Creating a even greater delays and higher costs. Eventhe insurance you try to promote, doesn't pay out for 6 months., After a 6 month \"investigation\".",
+    "reply": "<user> If your flight was delayed or cancelled by us, and you missed another flight on us because of it, we're happy to rebook you for free.",
+    "intent": null
+   },
+   {
+    "index": 71,
+    "score": 0.8763836622238159,
+    "id": 110334,
+    "text": "<user> I am not paying $ <num> to change a flight that was booked, reserved and ALREADY PAID FOR - YOU CANCELLED IT. <user> has lost me as a customer and after 35 years of flying your airline you are about to lose me as a customer as well. All I want is a refund for the return trip.",
+    "reply": "<user> Reservations must be used in the sequence that they're purchased or the ticket must be reissued.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 9,
+  "sha": "daa6728d03",
+  "message": "<user> Thanks <user> ! We got upgraded to #FirstClass on our RNO-LAX flight this morning! I am thankful for my Gold status. ✈️👍",
+  "draft": "<user> Thanks for flying with us this Monday morning, Chris. Have a fantastic flight and week!",
+  "hits": [
+   {
+    "index": 1044,
+    "score": 0.8786613941192627,
+    "id": 1057521,
+    "text": "Thanks <user> for the upgrade to first class. DFW-Boston #execplatinum #onlyflyAA #upgrades #firstclass",
+    "reply": "<user> Thanks for flying with us this Monday morning, Chris. Have a fantastic flight and week!",
+    "intent": null
+   },
+   {
+    "index": 1785,
+    "score": 0.8609896898269653,
+    "id": 1778229,
+    "text": "There are still main cabinAnd I think maybe first class.Fingers crossed that day I’ll be upgraded lol lax to HI <user> 😱",
+    "reply": "<user> We're doing our #UpgradeDance for you. Let us know how it goes!",
+    "intent": null
+   },
+   {
+    "index": 457,
+    "score": 0.8563490509986877,
+    "id": 469045,
+    "text": "I flew <user> back from #SFO and actually had a pleasant experience. Flights were on time, service/attendants were great. A+ experience this time. Much improved. #thanks",
+    "reply": "<user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.",
+    "intent": null
+   },
+   {
+    "index": 565,
+    "score": 0.8557841181755066,
+    "id": 588957,
+    "text": "Another day with the <user> #fAAmily. Thanks for the upgrade! #executiveplatinum hoping for #conciergekey #travel #airtravel #travelskills #traveltips #AvGeek <user> <url>",
+    "reply": "<user> We always love sharing the skies with you. Sit back, relax and enjoy sitting #upfront!",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 10,
+  "sha": "db6debc4c2",
+  "message": "<user> Except it will cost us more to get home from there. <user> issues vouchers for its customers in such situations. Disappointed you don't too",
+  "draft": "We're sorry for the inconvenience. A colleague will follow up to discuss your concerns about additional costs.",
+  "hits": [
+   {
+    "index": 1228,
+    "score": 0.866264283657074,
+    "id": 1200362,
+    "text": "<user> I already did that and u refused to cover my expenses. They gave me a $ <num> voucher for my next flight. This is how you treat your customers?",
+    "reply": "<user> We always try and help our customers as much as possible, but we're sorry we weren't able to cover more of your expenses.",
+    "intent": null
+   },
+   {
+    "index": 30,
+    "score": 0.8653309345245361,
+    "id": 56172,
+    "text": "<user> Typically more expensive? Try 10X more expensive. Won't cover the cost of a ticket? It can't be used TOWARDS the cost of the ticket!",
+    "reply": "<user> You can use your voucher towards the ticket and purchase the difference, Bill. Please contact Reservations at <phone> . They can help.",
+    "intent": null
+   },
+   {
+    "index": 2645,
+    "score": 0.8624832630157471,
+    "id": 2616848,
+    "text": "<user> please do they offered my wife and I... <num> voucher, we upgraded our seats , lost them and paid for them, sat in the back of the plane, missed whole day of vacation, had to pay for lunch and dinner at two airports, I also had to pay rental car co $ <num> more for missed reservation",
+    "reply": "<user> We found your record locator, Ed. Please share your wife's, or her ticket number starting with <num> privately in DMs.",
+    "intent": null
+   },
+   {
+    "index": 1532,
+    "score": 0.8615831732749939,
+    "id": 1533970,
+    "text": "<user> <user> <user> logically think through this great service. It costs you less $ since I'm not flying yet I have to pay more. Let alone a refund",
+    "reply": "<user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 11,
+  "sha": "04744fab77",
+  "message": "Man, the <user> mobile app sucks. <user> does it way better and has far far more functionality.",
+  "draft": "<user> We'd love you to have fly with us on new AAdventures!",
+  "hits": [
+   {
+    "index": 1381,
+    "score": 0.848278820514679,
+    "id": 1364071,
+    "text": "Man, the <user> app is barren. A little too barren for my likes.",
+    "reply": "<user> We'd love you to have fly with us on new AAdventures!",
+    "intent": null
+   },
+   {
+    "index": 2659,
+    "score": 0.8330079317092896,
+    "id": 2631772,
+    "text": "<user> is horrendous and truly has despicable customer service. Unlike <user>",
+    "reply": "<user> We don't want you to have that impression of us, Ali. How can we help you?",
+    "intent": null
+   },
+   {
+    "index": 2352,
+    "score": 0.8296104669570923,
+    "id": 2322702,
+    "text": "Today has reminded me why <user> is and will remain my choice airline. <user> is absolute garbage.",
+    "reply": "<user> We hope you'll give us another chance to impress you, Brandon.",
+    "intent": null
+   },
+   {
+    "index": 1358,
+    "score": 0.8282227516174316,
+    "id": 1340175,
+    "text": "<user> has THE most incompetent customer service I have ever experienced. This is why I fly <user>",
+    "reply": "<user> Everyday our team takes excellent care of our customers and we're sorry to hear this, Billy. How can we help you today?",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 12,
+  "sha": "485f67708d",
+  "message": "I’m increasingly blown away by <user> and their utter lack of efficiency and regard for customers. CRJs with no wifi, rude employees.",
+  "draft": "<user> We're sorry to hear about your experience. Please share more details so we can look into this for you.",
+  "hits": [
+   {
+    "index": 2780,
+    "score": 0.871921181678772,
+    "id": 2764679,
+    "text": "It’s like <user> employees go out of their way to be negligent with important matters. Shitty customer care. As always.",
+    "reply": "<user> We're sorry to hear that. Please continue working with our lost and found team to get this resolved.",
+    "intent": null
+   },
+   {
+    "index": 1358,
+    "score": 0.865239143371582,
+    "id": 1340175,
+    "text": "<user> has THE most incompetent customer service I have ever experienced. This is why I fly <user>",
+    "reply": "<user> Everyday our team takes excellent care of our customers and we're sorry to hear this, Billy. How can we help you today?",
+    "intent": null
+   },
+   {
+    "index": 1403,
+    "score": 0.8624809384346008,
+    "id": 1388942,
+    "text": "<user> worst airline. Can’t even get flight crew on time for first flight of the day?!?!",
+    "reply": "<user> We appreciate your patience, we see that our crew is arriving. We'll quickly board and have you in the air soon.",
+    "intent": null
+   },
+   {
+    "index": 64,
+    "score": 0.8605020046234131,
+    "id": 100567,
+    "text": "There hasn’t been a single time I’ve flown <user> that it has been on time and I’m never flying it again",
+    "reply": "<user> We assure you that's not a pattern we'd care to keep and always do our best to leave on time. We'll have you airborne ASAP!",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 13,
+  "sha": "6ef6cf2a9f",
+  "message": "<user> Thank you! Made the start of my week on to remember. Thanks for the great experience! #FlyAmerican",
+  "draft": "<user> We're glad to hear you had a great start to your week! Thanks for flying with us—we look forward to welcoming you back soon.",
+  "hits": [
+   {
+    "index": 2304,
+    "score": 0.884829044342041,
+    "id": 2301676,
+    "text": "<user> Thanks American for my safe and on time travel this week!",
+    "reply": "<user> It's great to have you fly with us, Fred. We'll keep the engines running for your next trip out.",
+    "intent": null
+   },
+   {
+    "index": 1070,
+    "score": 0.8829585909843445,
+    "id": 1074811,
+    "text": "I love flying American Airlines. Always have, always will. Thank you for the upgrade <user> , you guys rock! #bestairline <url>",
+    "reply": "<user> We always love having you soaring through the skies with us, Kristien! Enjoy your flight and weekend.",
+    "intent": null
+   },
+   {
+    "index": 457,
+    "score": 0.8780920505523682,
+    "id": 469045,
+    "text": "I flew <user> back from #SFO and actually had a pleasant experience. Flights were on time, service/attendants were great. A+ experience this time. Much improved. #thanks",
+    "reply": "<user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.",
+    "intent": null
+   },
+   {
+    "index": 469,
+    "score": 0.875511109828949,
+    "id": 487063,
+    "text": "I was annoyed with the confusion w/trying to get off the plane last night... but <user> ’s social media team is hustling out responses and info so rapidly! I appreciate it!!! #flyAmericanAir #thankyou <url>",
+    "reply": "<user> We're here 24/7 to help! Tweet us if you need anything.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 14,
+  "sha": "a3481e168c",
+  "message": "On our way to Paris and <user> flight canceled twice! Worst customer service ever!!! They won’t give us our bags. Missing flights",
+  "draft": "<user> We want to reunite you with your bag quickly. Did you file a report with our Baggage team at the airport?",
+  "hits": [
+   {
+    "index": 219,
+    "score": 0.8987985849380493,
+    "id": 273255,
+    "text": "<user> lost my bag in Miami no idea when I’ll see it again... worst customer service ever no apologies no help after delays on flights",
+    "reply": "<user> We want to reunite you with your bag quickly. Did you file a report with our Baggage team at the airport?",
+    "intent": null
+   },
+   {
+    "index": 2216,
+    "score": 0.884292721748352,
+    "id": 2258660,
+    "text": "<user> Flight has been delayed about 6 times at this point. Either cancel the flight, get me a new one, or compensate me for this inconvenience. HORRIBLE customer service. Won’t be flying your airline again.",
+    "reply": "<user> We'd like to get you an update, what's your flight number?",
+    "intent": null
+   },
+   {
+    "index": 129,
+    "score": 0.8840765953063965,
+    "id": 184005,
+    "text": "Will never fly <user> ever again! Lose my bags to Seattle and now a “faulty” plane delays for more than hour and a half. Awful Service",
+    "reply": "<user> We're sorry things haven't gone as planned tonight. We want to get you on your way as soon as possible.",
+    "intent": null
+   },
+   {
+    "index": 2269,
+    "score": 0.8778014183044434,
+    "id": 2287156,
+    "text": "<user> didn’t realize you could cancel one flight and you all would cancel my entire trip #shame #badservice",
+    "reply": "<user> Your flights have to be taken in order to retain value. If you're going to not take a flight, we're happy to change your ticket.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 15,
+  "sha": "b432bd795e",
+  "message": "Sad <user> gave up MarineTerm. Guess I’ll go back to flying <user> to get miles, since it’s no easier to get to Term B than Term C/D.",
+  "draft": "<user> We're sorry for the extra cardio, Diana. Flight <num> is leaving now from C1.",
+  "hits": [
+   {
+    "index": 822,
+    "score": 0.846725583076477,
+    "id": 852129,
+    "text": "<user> - shuttled to terminal D only to be told they moved <flight> back to C. Hope I make my 12:00 flight.",
+    "reply": "<user> We're sorry for the extra cardio, Diana. Flight <num> is leaving now from C1.",
+    "intent": null
+   },
+   {
+    "index": 911,
+    "score": 0.8455795645713806,
+    "id": 940174,
+    "text": "Charging for snacks and carry-ons? Did <user> get bought by <user> ? Looks like I’ll be flying <user> from now on.",
+    "reply": "<user> Snacks are available for purchase on board. Basic Economy is a newer, restrictive fare type. Here's info: <url>",
+    "intent": null
+   },
+   {
+    "index": 1224,
+    "score": 0.8398520946502686,
+    "id": 1199536,
+    "text": "<user> My wife waited <user> airport for 3hr &amp; mssd her cncting flit. Now she’s stuck&amp;lokd out of the trmnl w/ no place to sleep. Thnx",
+    "reply": "<user> Please have her reach out to us or give us a call at <phone> for rebooking options.",
+    "intent": null
+   },
+   {
+    "index": 1679,
+    "score": 0.8386201858520508,
+    "id": 1663692,
+    "text": "<user> why move me from C to A at the last minute at <user> ? Now I have no club to wait in for my flight. 😭😭✈️😭 #fwp",
+    "reply": "<user> Sorry about that Wesley. Luckily, there's a lot of things to do to keep you busy at DFW.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 16,
+  "sha": "e5b564078d",
+  "message": "<user> from your phones to your agents to your attendants, you have the WORST customer service. Unacceptable. So rude.",
+  "draft": "<user> We count on all our agents to be courteous and kind, Kyle. We're very sorry for any rudeness you experienced.",
+  "hits": [
+   {
+    "index": 577,
+    "score": 0.8665107488632202,
+    "id": 594171,
+    "text": "<user> has the absolute worst customer service in LAX. The gate agent was incredibly rude when I inquired about upgrading my boarding position. I will keep my money with <user>",
+    "reply": "<user> We count on all our agents to be courteous and kind, Kyle. We're very sorry for any rudeness you experienced.",
+    "intent": null
+   },
+   {
+    "index": 1000,
+    "score": 0.8648626804351807,
+    "id": 1023929,
+    "text": "<user> <user> also nice to know that you don't have a customer service team who can speak on the phone. #horriblepolicy",
+    "reply": "<user> Please give our specialists in AAdvantage Customer Service a call at <phone> , M-F, 8a-7p CT.",
+    "intent": null
+   },
+   {
+    "index": 2688,
+    "score": 0.862444281578064,
+    "id": 2662458,
+    "text": "<user> We had 2 different calls that had the same experience and one was even with a supervisor. I’m surprised that’s acceptable customer service.",
+    "reply": "<user> We always want to treat you with kindness and respect and we're sorry that wasn't the case today.",
+    "intent": null
+   },
+   {
+    "index": 2659,
+    "score": 0.8554092645645142,
+    "id": 2631772,
+    "text": "<user> is horrendous and truly has despicable customer service. Unlike <user>",
+    "reply": "<user> We don't want you to have that impression of us, Ali. How can we help you?",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 17,
+  "sha": "a47117bf6b",
+  "message": "<user> especially since there's no reason you can't refund money if I don't get off the standby list, except desire to steal.",
+  "draft": "<user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>",
+  "hits": [
+   {
+    "index": 1532,
+    "score": 0.8425402045249939,
+    "id": 1533970,
+    "text": "<user> <user> <user> logically think through this great service. It costs you less $ since I'm not flying yet I have to pay more. Let alone a refund",
+    "reply": "<user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>",
+    "intent": null
+   },
+   {
+    "index": 331,
+    "score": 0.8370621204376221,
+    "id": 368017,
+    "text": "<user> Now I'm back to square one with no refund, no $ <num> , offer I originally took, and still wait till the next available flight. <user>",
+    "reply": "<user> If you didn't end up in the same seating area you purchased, then a seat refund will be issued. Our apologies for this experience.",
+    "intent": null
+   },
+   {
+    "index": 2375,
+    "score": 0.8287321329116821,
+    "id": 2354076,
+    "text": "<user> A refund of the ridiculous $ <num> changeover fee would be nice.",
+    "reply": "<user> If you've purchased a non-refundable ticket and are making a voluntary change, the change charges will apply.",
+    "intent": null
+   },
+   {
+    "index": 1718,
+    "score": 0.8285070061683655,
+    "id": 1704223,
+    "text": "<user> Esp. since U didn’t refund my flight or free miles after having me provide my own transportation to my destination 2.5 hours out of my way.",
+    "reply": "<user> Everything looks great and on time for you! Thanks for giving us another chance. We'll have you #wheelsup soon.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 18,
+  "sha": "f1708e73de",
+  "message": "My 6am 20 minute flight has just turned to a 9:30 2 hour bus ride and a missed connection. Thanks <user> #Unacceptable",
+  "draft": "<user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.",
+  "hits": [
+   {
+    "index": 2101,
+    "score": 0.8854780197143555,
+    "id": 2152597,
+    "text": "What do you know... flight back home was delayed. Probably missing our connecting flight and stuck over night. <user> is so great. 🙃",
+    "reply": "<user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.",
+    "intent": null
+   },
+   {
+    "index": 1121,
+    "score": 0.8818931579589844,
+    "id": 1109686,
+    "text": "Delays abound as usual with <user> . <user> with fellow passengers and poor communication on when this 2 hour debacle will end",
+    "reply": "<user> We dislike delays as much as you do, but see that you're on your way now. Thanks for your patience.",
+    "intent": null
+   },
+   {
+    "index": 1005,
+    "score": 0.8788105845451355,
+    "id": 1025769,
+    "text": "Thanks <user> for cancelling my connecting flight and then delaying my new one 3 times 😤",
+    "reply": "<user> We know you're ready to be at your destination, and truly appreciate your patience with the wait.",
+    "intent": null
+   },
+   {
+    "index": 1171,
+    "score": 0.8787335157394409,
+    "id": 1155371,
+    "text": "Our first flight landed 30 min late &amp; our second flight decided to leave early knowing there were ppl arriving late...thanks <user> 🙄",
+    "reply": "<user> Doors close 10 minutes prior to help with an on-time departure and we're sorry for the delay. Please see our team for rebooking.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 19,
+  "sha": "756fd5def7",
+  "message": "If <user> is treating a aadvantage member, and card holder this way, I can only imagine what they do to everyone else. I don't want another \" im sorry\". I want my fucking bag, and money back.",
+  "draft": "<user> Please work with our Baggage team on this. They can take a look for you. <url>",
+  "hits": [
+   {
+    "index": 480,
+    "score": 0.8625659942626953,
+    "id": 496256,
+    "text": "<user> hopefully you guys comp me for the major inconvenience over the holiday with my lost bag. An \"I am sorry\" does not cut it.",
+    "reply": "<user> Please work with our Baggage team on this. They can take a look for you. <url>",
+    "intent": null
+   },
+   {
+    "index": 812,
+    "score": 0.8589528799057007,
+    "id": 837475,
+    "text": "<user> Not sure how $ <num> makes up for being lied to and swindled out of $ <num> . Nor does it make up for the struggle getting to my gate due to your lack of organization. Clearly being a AAdvantage member is not really an advantage. #makeitright",
+    "reply": "<user> If you're unhappy with a response from our Customer Relations team, you're welcome to ask for a further review.",
+    "intent": null
+   },
+   {
+    "index": 228,
+    "score": 0.8493337631225586,
+    "id": 282334,
+    "text": "Also <user> left/lost my bag in Philly soooo ...it better get here tomorrow like the nice Italian woman at the Venice airport said, AA",
+    "reply": "<user> We're sorry to hear that your bag didn't arrive. You can check with our Baggage team for any updates: <url>",
+    "intent": null
+   },
+   {
+    "index": 2042,
+    "score": 0.8474975824356079,
+    "id": 2081228,
+    "text": "<user> forces advantage members to pay 2x for checked bags or buy pricier ticket. Time for a new airline &amp; credit card #greedy #shame",
+    "reply": "<user> If a Basic Economy ticket is purchased, your bag would need to be checked at the counter or an additional cost would apply, Angel.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 20,
+  "sha": "a5c4502d05",
+  "message": "Why is it so hard to connect to the <user> wifi?! 😭🌀✈️😐 but wait why can I post this tweet but I can't watch #mylittlepony",
+  "draft": "<user> We're sorry about that, Rick. Please reach out to our friends <user> for assistance with your Wi-Fi.",
+  "hits": [
+   {
+    "index": 1803,
+    "score": 0.818523645401001,
+    "id": 1794415,
+    "text": "Have such a slow, unreliable internet connection on <user> on my <user> flight they must think I'm <user>",
+    "reply": "<user> We're sorry about that, Rick. Please reach out to our friends <user> for assistance with your Wi-Fi.",
+    "intent": null
+   },
+   {
+    "index": 2803,
+    "score": 0.8118427395820618,
+    "id": 2788298,
+    "text": "The only thing worse than #Amtrak wifi is <user> ! <user> please change to #Fly-Fi!!",
+    "reply": "<user> Jeremy, we know staying connected at 35k feet is important. Please reach out to our friends <user> for assistance.",
+    "intent": null
+   },
+   {
+    "index": 2544,
+    "score": 0.8104813098907471,
+    "id": 2518524,
+    "text": "<user> love you guys but the wireless I just spent 29.95 is awful please upgrade to at least N rates wireless also can’t get the entertainment to work and it’s a 6 hour flight #BoredAF",
+    "reply": "<user> Please reach out to our friends <user> to check it out the speeds for you. Our crew should be able to assist with the entertainment.",
+    "intent": null
+   },
+   {
+    "index": 2309,
+    "score": 0.8056265711784363,
+    "id": 2305364,
+    "text": "Flights that don’t have WiFi access should be illegal 😑 <user>",
+    "reply": "<user> We know you'd like to stay connected on board. We appreciate your feedback, Jessica!",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 21,
+  "sha": "8e6f71a5b9",
+  "message": "<user> from your phones to your agents to your attendants, you have the WORST customer service. Unacceptable. So rude.",
+  "draft": "<user> We always want to treat you with kindness and respect and we're sorry that wasn't the case today.",
+  "hits": [
+   {
+    "index": 577,
+    "score": 0.8665107488632202,
+    "id": 594171,
+    "text": "<user> has the absolute worst customer service in LAX. The gate agent was incredibly rude when I inquired about upgrading my boarding position. I will keep my money with <user>",
+    "reply": "<user> We count on all our agents to be courteous and kind, Kyle. We're very sorry for any rudeness you experienced.",
+    "intent": null
+   },
+   {
+    "index": 1000,
+    "score": 0.8648626804351807,
+    "id": 1023929,
+    "text": "<user> <user> also nice to know that you don't have a customer service team who can speak on the phone. #horriblepolicy",
+    "reply": "<user> Please give our specialists in AAdvantage Customer Service a call at <phone> , M-F, 8a-7p CT.",
+    "intent": null
+   },
+   {
+    "index": 2688,
+    "score": 0.862444281578064,
+    "id": 2662458,
+    "text": "<user> We had 2 different calls that had the same experience and one was even with a supervisor. I’m surprised that’s acceptable customer service.",
+    "reply": "<user> We always want to treat you with kindness and respect and we're sorry that wasn't the case today.",
+    "intent": null
+   },
+   {
+    "index": 2659,
+    "score": 0.8554092645645142,
+    "id": 2631772,
+    "text": "<user> is horrendous and truly has despicable customer service. Unlike <user>",
+    "reply": "<user> We don't want you to have that impression of us, Ali. How can we help you?",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 22,
+  "sha": "d51ce6d8b7",
+  "message": "<user> are you purposefully ignoring my issue?",
+  "draft": "<user> We're unable to help with passwords, but we're here to assist. What's going on?",
+  "hits": [
+   {
+    "index": 1838,
+    "score": 0.8306736350059509,
+    "id": 1826430,
+    "text": "<user> So, you can't help me?",
+    "reply": "<user> We're unable to help with passwords, but we're here to assist. What's going on?",
+    "intent": null
+   },
+   {
+    "index": 1792,
+    "score": 0.8120827078819275,
+    "id": 1785045,
+    "text": "<user> screwed us over and is now ignoring my emails. Perfect.",
+    "reply": "<user> Who are you trying to reach, Isaac? Is it Customer Relations or our Central Baggage team?",
+    "intent": null
+   },
+   {
+    "index": 1040,
+    "score": 0.8110600709915161,
+    "id": 1054889,
+    "text": "<user> I have no reason to dm u. U know the problem and how I want it resolved",
+    "reply": "<user> We never like to hear that our service has disappointed you. We took a closer look and are unable to refund you for your recent experience",
+    "intent": null
+   },
+   {
+    "index": 2411,
+    "score": 0.8089840412139893,
+    "id": 2384390,
+    "text": "<user> Asking me to DM you then ignoring me doesn't solve the problem, nor improve my impression of your company. #poorservice again.",
+    "reply": "<user> We're taking a look at your DMs now, we'll respond there soon.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 23,
+  "sha": "5f1f37ca53",
+  "message": "Man, the <user> mobile app sucks. <user> does it way better and has far far more functionality.",
+  "draft": "<user> We're sorry to hear you're having trouble with our app. We'd love to help improve your experience—how can we assist you today?",
+  "hits": [
+   {
+    "index": 1381,
+    "score": 0.848278820514679,
+    "id": 1364071,
+    "text": "Man, the <user> app is barren. A little too barren for my likes.",
+    "reply": "<user> We'd love you to have fly with us on new AAdventures!",
+    "intent": null
+   },
+   {
+    "index": 2659,
+    "score": 0.8330079317092896,
+    "id": 2631772,
+    "text": "<user> is horrendous and truly has despicable customer service. Unlike <user>",
+    "reply": "<user> We don't want you to have that impression of us, Ali. How can we help you?",
+    "intent": null
+   },
+   {
+    "index": 2352,
+    "score": 0.8296104669570923,
+    "id": 2322702,
+    "text": "Today has reminded me why <user> is and will remain my choice airline. <user> is absolute garbage.",
+    "reply": "<user> We hope you'll give us another chance to impress you, Brandon.",
+    "intent": null
+   },
+   {
+    "index": 1358,
+    "score": 0.8282227516174316,
+    "id": 1340175,
+    "text": "<user> has THE most incompetent customer service I have ever experienced. This is why I fly <user>",
+    "reply": "<user> Everyday our team takes excellent care of our customers and we're sorry to hear this, Billy. How can we help you today?",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 24,
+  "sha": "a1218a78c8",
+  "message": "<user> Thanks <user> ! We got upgraded to #FirstClass on our RNO-LAX flight this morning! I am thankful for my Gold status. ✈️👍",
+  "draft": "<user> Thanks for flying with us! Enjoy your First Class experience and have a great trip!",
+  "hits": [
+   {
+    "index": 1044,
+    "score": 0.8786613941192627,
+    "id": 1057521,
+    "text": "Thanks <user> for the upgrade to first class. DFW-Boston #execplatinum #onlyflyAA #upgrades #firstclass",
+    "reply": "<user> Thanks for flying with us this Monday morning, Chris. Have a fantastic flight and week!",
+    "intent": null
+   },
+   {
+    "index": 1785,
+    "score": 0.8609896898269653,
+    "id": 1778229,
+    "text": "There are still main cabinAnd I think maybe first class.Fingers crossed that day I’ll be upgraded lol lax to HI <user> 😱",
+    "reply": "<user> We're doing our #UpgradeDance for you. Let us know how it goes!",
+    "intent": null
+   },
+   {
+    "index": 457,
+    "score": 0.8563490509986877,
+    "id": 469045,
+    "text": "I flew <user> back from #SFO and actually had a pleasant experience. Flights were on time, service/attendants were great. A+ experience this time. Much improved. #thanks",
+    "reply": "<user> We have the best crews around! Thanks for your kind words, Jamal. Looking forward to seeing you again real soon.",
+    "intent": null
+   },
+   {
+    "index": 565,
+    "score": 0.8557841181755066,
+    "id": 588957,
+    "text": "Another day with the <user> #fAAmily. Thanks for the upgrade! #executiveplatinum hoping for #conciergekey #travel #airtravel #travelskills #traveltips #AvGeek <user> <url>",
+    "reply": "<user> We always love sharing the skies with you. Sit back, relax and enjoy sitting #upfront!",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 25,
+  "sha": "1ae161391f",
+  "message": "<user> are you seriously going to keep us delayed over a curtain strap? Flight128 #thisiscrazy",
+  "draft": "<user> We're truly sorry that you're leaving much later than planned. Please work with our team to see all route and options to DFW.",
+  "hits": [
+   {
+    "index": 429,
+    "score": 0.8660025000572205,
+    "id": 430228,
+    "text": "<user> really? A 5 hour delay 9 minutes before we board? This is why I fly <user>",
+    "reply": "<user> We're truly sorry that you're leaving much later than planned. Please work with our team to see all route and options to DFW.",
+    "intent": null
+   },
+   {
+    "index": 965,
+    "score": 0.8623151779174805,
+    "id": 991299,
+    "text": "<user> I get that you don’t have spare 787s lying around, but you need a better plan than delaying us 15 hours # <flight>",
+    "reply": "<user> Our airport team does their best to reroute our customers through authorized airlines. We're sorry for the long travel day.",
+    "intent": null
+   },
+   {
+    "index": 1688,
+    "score": 0.8612167835235596,
+    "id": 1670908,
+    "text": "<user> been delayed over an hour now sitting on the plane. No drinks or snacks. This is ridiculous",
+    "reply": "<user> We know you're ready to be wheels up. What's your flight number? We'll check on an update for you.",
+    "intent": null
+   },
+   {
+    "index": 1116,
+    "score": 0.8584492206573486,
+    "id": 1105683,
+    "text": "<user> what's going on with flight <num> ? Keeps getting delayed",
+    "reply": "<user> We were waiting on the incoming aircraft. We're glad to see you've pulled out of the gate, and we'll have you wheels up ASAP.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 26,
+  "sha": "20456127e0",
+  "message": ". <user> To your crew’s credit, once they found out that I needed to write a eulogy in-flight, they found me a new seat with a working light and checked repeatedly to make sure I was comfortable.",
+  "draft": "<user> Thank you for sharing this kind feedback. We're glad our crew could assist you during your flight and will pass along your appreciation to the team.",
+  "hits": [
+   {
+    "index": 298,
+    "score": 0.8653140068054199,
+    "id": 338282,
+    "text": "<user> thank you! The flight crew and fellow passengers all worked it out. The passenger was very appreciative and thankful.",
+    "reply": "<user> That's great to hear our crew and customers were able to assist him. Thanks for letting us know!",
+    "intent": null
+   },
+   {
+    "index": 1682,
+    "score": 0.8620477318763733,
+    "id": 1670763,
+    "text": "<user> I want to pass on kudos to an excellent flight crew yesterday on <flight> . The purser, Lynn, was particularly exceptional.",
+    "reply": "<user> We appreciate your kudos for Lynn and all of our #AATeam. We'll make sure they're recognized for a job well done!",
+    "intent": null
+   },
+   {
+    "index": 837,
+    "score": 0.8538646697998047,
+    "id": 870545,
+    "text": "<user> Unbelievable service from the crew on <flight> right now. Great start to our trip!",
+    "reply": "<user> Now that's what we're talking about, way to rock it #AATeam!",
+    "intent": null
+   },
+   {
+    "index": 975,
+    "score": 0.8518893718719482,
+    "id": 1001594,
+    "text": "<user> you’ve got a great crew on <num> . They invited first time flyers to see the cockpit and genuinely thanked us for flying AA.",
+    "reply": "<user> Thanks for the shout-out to our crew! We'll be sure to pass this on to our #AATeam for recognition.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 27,
+  "sha": "e0aae7565e",
+  "message": "<user> honestly I am not surprised you're turning into an airline that charges for every little thing. Way to go on that service.",
+  "draft": "We're sorry you feel that way. We appreciate your feedback and are always working to improve your experience.",
+  "hits": [
+   {
+    "index": 607,
+    "score": 0.8802380561828613,
+    "id": 620721,
+    "text": "<user> yeah, could you please stop shrinking the seats and charging for luggage? Thanks!",
+    "reply": "<user> We appreciate your feedback and we're sorry we've upset you. Most fares allow a free carry-on and personal item on board.",
+    "intent": null
+   },
+   {
+    "index": 1602,
+    "score": 0.8789166212081909,
+    "id": 1599338,
+    "text": "<user> U should make sure you disclose this bs. Obviously u folks love screwing customers all for a dollar. F this airline",
+    "reply": "<user> We're sorry if you missed the pop ups letting you know about the restrictions. We're looking forward to seeing you.",
+    "intent": null
+   },
+   {
+    "index": 1103,
+    "score": 0.8740557432174683,
+    "id": 1098751,
+    "text": "<user> it's amazing I am not even flying your airline and I am still reminded your employees are worthless.",
+    "reply": "<user> That sure isn't how we want to be remembered. We're here for you anytime you need us, Chris.",
+    "intent": null
+   },
+   {
+    "index": 851,
+    "score": 0.8683932423591614,
+    "id": 884147,
+    "text": "<user> But hey, it's worth $19 to let you know how lousy your airline is. Keep up the good work. <url>",
+    "reply": "<user> We always want to offer you the latest in technology and entertainment and are upgrading our fleet as fast as we can.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 28,
+  "sha": "445e883300",
+  "message": "<user> Update #Flight1457 - able to get on another flight, this time to Miami, then onward to PHX, touching down about 2hrs later than originally anticipated (notabigdeal). Just another travel adventure. Oh btw, had to run back to the other end of B terminal to get on #extrasteps",
+  "draft": "<user> We're so sorry for the extra steps and delay today. We appreciate you making it to your destination and hope the rest of your trip goes smoothly.",
+  "hits": [
+   {
+    "index": 2107,
+    "score": 0.8740606904029846,
+    "id": 2158091,
+    "text": "<flight> : 30 mins late departure from DTW, 4+ hours in the air only to land in PHX to occupied gates for an estimated 30 minute grounding. Thanks for the suck <user>",
+    "reply": "<user> We're so sorry your travel was affected today, Rick. We strive to be on time and we fell short today.",
+    "intent": null
+   },
+   {
+    "index": 1383,
+    "score": 0.8670938611030579,
+    "id": 1364091,
+    "text": "<user> I understand but now I’m trying to leave to Miami and the flight is delayed over an hour .. 4 hours in delays in 3 days and 2 flights. 😒",
+    "reply": "<user> This certainly isn't the record we want to have. Our crew's working hard to have everything prepared for takeoff, which should be soon.",
+    "intent": null
+   },
+   {
+    "index": 223,
+    "score": 0.8664541840553284,
+    "id": 275770,
+    "text": "<user> flight <num> MIA-BCN delayed 4 hours! 2 in the plane 2 out... And now the pilots need to check if they are overtime!😒 I want 1, <num> , <num> miles for this inconvenience please... <url>",
+    "reply": "<user> We're so sorry for the delay, Dario. Our team's working hard to have you on your way as quickly as possible.",
+    "intent": null
+   },
+   {
+    "index": 2835,
+    "score": 0.8648594617843628,
+    "id": 2814128,
+    "text": "Hour and a half delay with more to come. We just don't know how much. Great job <user> . That's another reason why I fly <user> every chance I get.",
+    "reply": "<user> We're very sorry for the extra travel time, Brian. Your experience is important to us.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 29,
+  "sha": "b7e78ecc82",
+  "message": "Over an hour later I have my bag, the nightmare is over, <user> can suck it, and I'll remain a Delta loyalist. Off to bed with sick me <url>",
+  "draft": "<user> We're sorry for the delay with your bag. We're glad it arrived safely. Please let our baggage team know if you need anything else by calling <phone>.",
+  "hits": [
+   {
+    "index": 1474,
+    "score": 0.8605422973632812,
+    "id": 1472993,
+    "text": "<user> I got home finally 7 hours after my scheduled flight with wet luggage.",
+    "reply": "<user> Oh wow, please let our baggage team know by dialing <phone> .",
+    "intent": null
+   },
+   {
+    "index": 462,
+    "score": 0.8587709665298462,
+    "id": 476600,
+    "text": "I flew <user> to Miami and landed at 5:03am its now 6:15 and still no bag. F$ <user> you and your lies. People have work and lives to get to. #neveragain",
+    "reply": "<user> We're sorry for the extra wait time for you bag, Michael. We'll get it out to you soon.",
+    "intent": null
+   },
+   {
+    "index": 2326,
+    "score": 0.8569400310516357,
+    "id": 2309781,
+    "text": "<user> has really screwed me over. They my bag. I reported it immediately and filled out a form, but a delayed bag file wasn’t actually made until 7 hours later after multiple calls. Nobody can even tell me where it is. I’m on a work trip. Can’t wear yesterday’s clothes",
+    "reply": "<user> We want to reunite you with your bag as quickly as possible, Ashlee. Please continue working with our Baggage team.",
+    "intent": null
+   },
+   {
+    "index": 1534,
+    "score": 0.8543611764907837,
+    "id": 1535243,
+    "text": "<user> Thank you! It took an hour; but our bags finally made it up.. though my \"priority\" bag was next to the last to come out...🙁",
+    "reply": "<user> We're sorry that it didn't come out first. We appreciate your patience today.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 30,
+  "sha": "9aa4104064",
+  "message": "<user> My connecting flight was cancelled and your company refuses to refund me fairly. With everything going on with your company I'm not surprised.",
+  "draft": "<user> We'd like to look into this for you. What's your flight number and booking reference?",
+  "hits": [
+   {
+    "index": 2216,
+    "score": 0.8927493095397949,
+    "id": 2258660,
+    "text": "<user> Flight has been delayed about 6 times at this point. Either cancel the flight, get me a new one, or compensate me for this inconvenience. HORRIBLE customer service. Won’t be flying your airline again.",
+    "reply": "<user> We'd like to get you an update, what's your flight number?",
+    "intent": null
+   },
+   {
+    "index": 71,
+    "score": 0.8894630670547485,
+    "id": 110334,
+    "text": "<user> I am not paying $ <num> to change a flight that was booked, reserved and ALREADY PAID FOR - YOU CANCELLED IT. <user> has lost me as a customer and after 35 years of flying your airline you are about to lose me as a customer as well. All I want is a refund for the return trip.",
+    "reply": "<user> Reservations must be used in the sequence that they're purchased or the ticket must be reissued.",
+    "intent": null
+   },
+   {
+    "index": 743,
+    "score": 0.8801230788230896,
+    "id": 775521,
+    "text": "<user> my flight was delayed, causing me to miss my next flight, and you won’t pay for me to stay in a hotel? It’s not my fault!",
+    "reply": "<user> We're unable to provide accommodations for delays outside of our control. We appreciate your patience throughout this delay.",
+    "intent": null
+   },
+   {
+    "index": 2978,
+    "score": 0.8713200092315674,
+    "id": 2970870,
+    "text": "So when are you going to let us know if our winter flights are cancelled <user> ? I'd rather just get a #refund now and fly another #airline to avoid having #holidays ruined. <url>",
+    "reply": "<user> We know that this is a season of a lot of special travel. We're fully expecting to avoid cancellations.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 31,
+  "sha": "a73d41f3bd",
+  "message": "Very proud to have the families of our employees see their workplace. What the <user> team does in Tulsa is AAmazing! #greatteam <url>",
+  "draft": "<user> What a great turnout! Looks like fun is being had by all.",
+  "hits": [
+   {
+    "index": 292,
+    "score": 0.8637685179710388,
+    "id": 332578,
+    "text": "I would say the <user> Tech Ops - Tulsa Family Day is a success. <user> would say so too! #avgeek #737mAAx #fAAmilyDay <url>",
+    "reply": "<user> What a great turnout! Looks like fun is being had by all.",
+    "intent": null
+   },
+   {
+    "index": 1784,
+    "score": 0.8333116769790649,
+    "id": 1778214,
+    "text": "<user> You have the best #employees ! Thank you <user> ! These two are real gems. #superstars #mademesmile",
+    "reply": "<user> That's exactly what we love to hear! #youmadeussmile #wink",
+    "intent": null
+   },
+   {
+    "index": 251,
+    "score": 0.8316963911056519,
+    "id": 302388,
+    "text": "This pretty <user> bird is making her big debut at Tech-Ops Tulsa's Family Day tomorrow. 😍 #avgeek #737Max8 <url>",
+    "reply": "<user> That sure is one #prettybird, all dolled up and ready to go!",
+    "intent": null
+   },
+   {
+    "index": 233,
+    "score": 0.8277260661125183,
+    "id": 287006,
+    "text": "After arriving in Dallas, we were able to visit with this outstanding young flight attendant from <user> ! We are so proud of <user> and all she has accomplished in her brief career with the worlds largest airline! #AmericanAllie <url>",
+    "reply": "<user> Our #AATeam is fantastic, we're so proud to have her be apart of our team!",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 32,
+  "sha": "4d5ce793d3",
+  "message": "<user> Thanks for changing my flight for free and making my trip so much more comfortable!",
+  "draft": "<user> We're happy when you're happy, Jill! Thanks for your kind words.",
+  "hits": [
+   {
+    "index": 2653,
+    "score": 0.9089847803115845,
+    "id": 2625415,
+    "text": "<user> so much &lt;3 for switching me from delayed flight to earlier one! Thank you!!!",
+    "reply": "<user> We're happy when you're happy, Jill! Thanks for your kind words.",
+    "intent": null
+   },
+   {
+    "index": 1135,
+    "score": 0.8936244249343872,
+    "id": 1116411,
+    "text": "I want to give credit to the nice folks at <user> for helping book a new flight and great customer service.",
+    "reply": "<user> Thanks for the shout-out! We value your business and glad our team provided great service.",
+    "intent": null
+   },
+   {
+    "index": 2885,
+    "score": 0.8834471106529236,
+    "id": 2867982,
+    "text": "<user> Many thanks for the great flight today <flight> and to the staff that arranged so my wife and I could sit together. Great service",
+    "reply": "<user> We're so happy that our team took great care of you! Have a fantastic evening.",
+    "intent": null
+   },
+   {
+    "index": 232,
+    "score": 0.8826478719711304,
+    "id": 285815,
+    "text": "<user> we missed our flight because your rude staff didn't think to inform their customers about changing the boarding gate so thank you very much",
+    "reply": "<user> We offer notification of any changes right to your mobile device via: <url>",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 33,
+  "sha": "6887e3c7e2",
+  "message": "Loving the new #FlagshipLounge at ORD. Thank you <user> for another great start to the travel day <url>",
+  "draft": "<user> We're so happy you're enjoying the new Flagship Lounge at ORD! Have a wonderful trip.",
+  "hits": [
+   {
+    "index": 621,
+    "score": 0.9119068384170532,
+    "id": 633131,
+    "text": "A little pre flight sustenance before my flight. Loving the new <user> #Flagship Lounge at <user> <url>",
+    "reply": "<user> Can't beat that breakfast, and that AAwesome #AAmericanview. Have a wonderful flight.",
+    "intent": null
+   },
+   {
+    "index": 924,
+    "score": 0.8786423206329346,
+    "id": 953404,
+    "text": "Thanks <user> &amp; <user> for making layovers more comfortable! #AdmiralsClub #comfort #relax <url>",
+    "reply": "<user> We're glad you're able to pass the time in comfort, Anne. Enjoy the Admiral's Club!",
+    "intent": null
+   },
+   {
+    "index": 89,
+    "score": 0.8785907030105591,
+    "id": 150838,
+    "text": "Stunning new Flagship Lounge in Miami. Congratulations <user> <user> #admiralsclub #flagship #first <url>",
+    "reply": "<user> We're so happy that you're enjoying our beautifully renovated lounge! Your impression of us is truly important.",
+    "intent": null
+   },
+   {
+    "index": 348,
+    "score": 0.8747440576553345,
+    "id": 375327,
+    "text": "<user> Great flight # <num> to ORD on new plane - wonderful attendants and captain!",
+    "reply": "<user> Oh, those are sweet news and thanks for letting us know so we can recognize their #AAwesomeness. #AATeam",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 34,
+  "sha": "44405b85cf",
+  "message": "<user> Took the guitar I was carrying from me so rudly and said that if something happens they don't know and don't care if something happen to it. Even threat me with leaving me on ground for the next flight",
+  "draft": "<user> Oh, no! We're so sorry to hear that happened. Your bag is on the next flight. Please file a claim when you arrive to set up delivery.",
+  "hits": [
+   {
+    "index": 2012,
+    "score": 0.8625028133392334,
+    "id": 2052704,
+    "text": "<user> come on guys...2 flights in a row, you guys don’t put my bag on the correct flight. Not cool.",
+    "reply": "<user> Oh, no! We're so sorry to hear that happened. Your bag is on the next flight. Please file a claim when you arrive to set up delivery.",
+    "intent": null
+   },
+   {
+    "index": 790,
+    "score": 0.8588841557502747,
+    "id": 824201,
+    "text": "<user> first time flying your airline in 6 years and will be my last. Had to check my carry on that has flown around the world with!",
+    "reply": "<user> Our agents do their best to judge the available space in the overhead bins, we're very sorry you had to check your bag tonight.",
+    "intent": null
+   },
+   {
+    "index": 2708,
+    "score": 0.8565389513969421,
+    "id": 2699885,
+    "text": "<user> never fly this airline again! Fly attendant kicking my son's bag just because we don't understand your rules!",
+    "reply": "<user> What's going on, Allen? Please meet us in DMs with your record locator and details.",
+    "intent": null
+   },
+   {
+    "index": 416,
+    "score": 0.8561887741088867,
+    "id": 416478,
+    "text": "<user> late flight, rude gate staff, have no idea what they are doing. Horrible customer service. Will avoid for future flights",
+    "reply": "<user> These aren't the interactions we want you to have and we're sorry for the rudeness you encountered, Reza.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 35,
+  "sha": "22efd32bcb",
+  "message": "Absolutely wonderful crew on <user> flight <num> to Dallas!",
+  "draft": "<user> Thanks so much for your kind words! Our #AATeam is awesome.",
+  "hits": [
+   {
+    "index": 2949,
+    "score": 0.8975003957748413,
+    "id": 2956565,
+    "text": "<user> Flight <num> DFW to JFK. Awesome crew!",
+    "reply": "<user> Thanks so much for your kind words! Our #AATeam is awesome.",
+    "intent": null
+   },
+   {
+    "index": 2704,
+    "score": 0.8864517211914062,
+    "id": 2697465,
+    "text": "Hey <user> Great crew on <flight> last night!",
+    "reply": "<user> Paul, we always like seeing our most valued customers happy We're thrilled our team took extra good care of you last night. #AATeam",
+    "intent": null
+   },
+   {
+    "index": 877,
+    "score": 0.8775646686553955,
+    "id": 903372,
+    "text": "<user> thank you for awesome crew on <flight> this morning.",
+    "reply": "<user> Thanks for your kudos this morning! We're happy to hear our #AATeam is taking wonderful care of you.",
+    "intent": null
+   },
+   {
+    "index": 903,
+    "score": 0.871479332447052,
+    "id": 932389,
+    "text": "The crew on flight <num> CLE➡️PHL was amazing, and quite the lookers, too. Thanks <user> !",
+    "reply": "<user> We have a greAAt and good looking #AATeam! Thanks for flying with us, Krystle.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 36,
+  "sha": "56ba07a74d",
+  "message": "<user> Except it will cost us more to get home from there. <user> issues vouchers for its customers in such situations. Disappointed you don't too",
+  "draft": "<user> We always try and help our customers as much as possible, but we're sorry we weren't able to cover more of your expenses.",
+  "hits": [
+   {
+    "index": 1228,
+    "score": 0.866264283657074,
+    "id": 1200362,
+    "text": "<user> I already did that and u refused to cover my expenses. They gave me a $ <num> voucher for my next flight. This is how you treat your customers?",
+    "reply": "<user> We always try and help our customers as much as possible, but we're sorry we weren't able to cover more of your expenses.",
+    "intent": null
+   },
+   {
+    "index": 30,
+    "score": 0.8653309345245361,
+    "id": 56172,
+    "text": "<user> Typically more expensive? Try 10X more expensive. Won't cover the cost of a ticket? It can't be used TOWARDS the cost of the ticket!",
+    "reply": "<user> You can use your voucher towards the ticket and purchase the difference, Bill. Please contact Reservations at <phone> . They can help.",
+    "intent": null
+   },
+   {
+    "index": 2645,
+    "score": 0.8624832630157471,
+    "id": 2616848,
+    "text": "<user> please do they offered my wife and I... <num> voucher, we upgraded our seats , lost them and paid for them, sat in the back of the plane, missed whole day of vacation, had to pay for lunch and dinner at two airports, I also had to pay rental car co $ <num> more for missed reservation",
+    "reply": "<user> We found your record locator, Ed. Please share your wife's, or her ticket number starting with <num> privately in DMs.",
+    "intent": null
+   },
+   {
+    "index": 1532,
+    "score": 0.8615831732749939,
+    "id": 1533970,
+    "text": "<user> <user> <user> logically think through this great service. It costs you less $ since I'm not flying yet I have to pay more. Let alone a refund",
+    "reply": "<user> Tickets must be used in the sequence they're purchased or the must be reissued. For more info see: <url>",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 37,
+  "sha": "9d882bb6db",
+  "message": "A number of airlines continue to increase their presence at <user> with new non-stop flights. I’m an AAdvantage member with <user> and I sure wish they will increase their service in Pittsburgh as well.",
+  "draft": "<user> Our team did call and received your voicemail, Natalie. Are you available for a call now?",
+  "hits": [
+   {
+    "index": 2874,
+    "score": 0.8553490042686462,
+    "id": 2856083,
+    "text": "Id actually like to speak to the president of the airlines <user> since in a recent interview he stated that \" we serve a full spectrum of customers needs that are frequent flyers.\" <url>",
+    "reply": "<user> Our team did call and received your voicemail, Natalie. Are you available for a call now?",
+    "intent": null
+   },
+   {
+    "index": 565,
+    "score": 0.8510945439338684,
+    "id": 588957,
+    "text": "Another day with the <user> #fAAmily. Thanks for the upgrade! #executiveplatinum hoping for #conciergekey #travel #airtravel #travelskills #traveltips #AvGeek <user> <url>",
+    "reply": "<user> We always love sharing the skies with you. Sit back, relax and enjoy sitting #upfront!",
+    "intent": null
+   },
+   {
+    "index": 288,
+    "score": 0.8500074148178101,
+    "id": 331014,
+    "text": "<user> I hope so. I fly a lot and always on AA as a platinum member. No technology on these long haul flights is not great. Thx.",
+    "reply": "<user> We'll be done soon. Thanks for hanging in there with us.",
+    "intent": null
+   },
+   {
+    "index": 2190,
+    "score": 0.8440393805503845,
+    "id": 2234769,
+    "text": "<user> They line is increasing and still no American Airlibes employees. Please consider this when you are giving travel instructions.",
+    "reply": "<user> We assure you that someone will be there shortly to assist. Thanks for waiting.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 38,
+  "sha": "0b12f73f3b",
+  "message": "My 6am 20 minute flight has just turned to a 9:30 2 hour bus ride and a missed connection. Thanks <user> #Unacceptable",
+  "draft": "<user> We're sorry your flight changed to a bus ride and caused a missed connection. We know this is frustrating and appreciate you bringing it to our attention.",
+  "hits": [
+   {
+    "index": 2101,
+    "score": 0.8854780197143555,
+    "id": 2152597,
+    "text": "What do you know... flight back home was delayed. Probably missing our connecting flight and stuck over night. <user> is so great. 🙃",
+    "reply": "<user> We're so sorry your flight has been delayed. We know you're ready to be home. Our Pilot may be able to make up some time once in the air.",
+    "intent": null
+   },
+   {
+    "index": 1121,
+    "score": 0.8818931579589844,
+    "id": 1109686,
+    "text": "Delays abound as usual with <user> . <user> with fellow passengers and poor communication on when this 2 hour debacle will end",
+    "reply": "<user> We dislike delays as much as you do, but see that you're on your way now. Thanks for your patience.",
+    "intent": null
+   },
+   {
+    "index": 1005,
+    "score": 0.8788105845451355,
+    "id": 1025769,
+    "text": "Thanks <user> for cancelling my connecting flight and then delaying my new one 3 times 😤",
+    "reply": "<user> We know you're ready to be at your destination, and truly appreciate your patience with the wait.",
+    "intent": null
+   },
+   {
+    "index": 1171,
+    "score": 0.8787335157394409,
+    "id": 1155371,
+    "text": "Our first flight landed 30 min late &amp; our second flight decided to leave early knowing there were ppl arriving late...thanks <user> 🙄",
+    "reply": "<user> Doors close 10 minutes prior to help with an on-time departure and we're sorry for the delay. Please see our team for rebooking.",
+    "intent": null
+   }
+  ]
+ },
+ {
+  "idx": 39,
+  "sha": "d940a3fcae",
+  "message": ". <user> To your crew’s credit, once they found out that I needed to write a eulogy in-flight, they found me a new seat with a working light and checked repeatedly to make sure I was comfortable.",
+  "draft": "<user> That's great to hear our crew and customers were able to assist him. Thanks for letting us know!",
+  "hits": [
+   {
+    "index": 298,
+    "score": 0.8653140068054199,
+    "id": 338282,
+    "text": "<user> thank you! The flight crew and fellow passengers all worked it out. The passenger was very appreciative and thankful.",
+    "reply": "<user> That's great to hear our crew and customers were able to assist him. Thanks for letting us know!",
+    "intent": null
+   },
+   {
+    "index": 1682,
+    "score": 0.8620477318763733,
+    "id": 1670763,
+    "text": "<user> I want to pass on kudos to an excellent flight crew yesterday on <flight> . The purser, Lynn, was particularly exceptional.",
+    "reply": "<user> We appreciate your kudos for Lynn and all of our #AATeam. We'll make sure they're recognized for a job well done!",
+    "intent": null
+   },
+   {
+    "index": 837,
+    "score": 0.8538646697998047,
+    "id": 870545,
+    "text": "<user> Unbelievable service from the crew on <flight> right now. Great start to our trip!",
+    "reply": "<user> Now that's what we're talking about, way to rock it #AATeam!",
+    "intent": null
+   },
+   {
+    "index": 975,
+    "score": 0.8518893718719482,
+    "id": 1001594,
+    "text": "<user> you’ve got a great crew on <num> . They invited first time flyers to see the cockpit and genuinely thanked us for flying AA.",
+    "reply": "<user> Thanks for the shout-out to our crew! We'll be sure to pass this on to our #AATeam for recognition.",
+    "intent": null
+   }
+  ]
+ }
+]

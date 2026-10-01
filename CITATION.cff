@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code, the evaluation set or its findings, please cite it as below."
+title: "A support agent for @AmericanAir — and how far to trust it"
+abstract: >-
+  An intent-classifying, retrieval-grounded reply-drafting and escalation-routing
+  customer-support agent built from the Kaggle Customer Support on Twitter dataset,
+  with a hand-labelled evaluation set, two baselines, an independent LLM annotator and
+  a logged account of what the headline numbers hide.
+authors:
+  - family-names: Jain
+    given-names: Suvidh
+version: 0.1.0
+date-released: 2026-10-01
+license: MIT
+repository-code: "https://github.com/SuvidhJ/how-far-to-trust-it"
+url: "https://suvidhj.github.io/how-far-to-trust-it/"
+keywords:
+  - customer support
+  - large language models
+  - evaluation
+  - intent classification
+  - retrieval-augmented generation
+  - LLM-as-judge

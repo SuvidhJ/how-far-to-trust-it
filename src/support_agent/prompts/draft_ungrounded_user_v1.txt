@@ -1,0 +1,10 @@
+# purpose: user turn for the ungrounded baseline drafter
+# version: 1
+# changing a single byte invalidates every cached draft; bump the version instead
+
+Customer message:
+{message}
+
+Predicted intent: {intent}
+
+Write the reply.
